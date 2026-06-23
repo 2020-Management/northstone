@@ -14,14 +14,15 @@ layout: default
     <div class="article-byline">
       <span class="avatar" aria-hidden="true">N</span>
       <div>
-        <div class="article-byline-name">{{ page.author | default: site.author }}</div>
+        <div class="article-byline-name">{{ page.author | default: site.author.name }}</div>
         <div class="article-byline-place">{{ page.author_location | default: "Zurich" }}</div>
       </div>
     </div>
   </div>
 
-  {% comment %} Lead image: explicit page.image, else a per-category default. {% endcomment %}
-  {% assign lead = page.image %}
+  {% comment %} Lead image: explicit page.lead_image basename, else a per-category default.
+     (Distinct from page.image, which is the OG/social card used by jekyll-seo-tag.) {% endcomment %}
+  {% assign lead = page.lead_image %}
   {% unless lead %}
     {% case page.category %}
       {% when 'Regulation' %}{% assign lead = 'lead-regulation' %}

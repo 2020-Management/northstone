@@ -1,18 +1,44 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Organization",
+  "@type": ["Organization", "FinancialService"],
   "name": "Northstone Invest",
   "url": {{ '/' | absolute_url | jsonify }},
-  "logo": {{ '/assets/img/favicon.svg' | absolute_url | jsonify }},
-  "description": {{ site.description | jsonify }},
+  "logo": {{ '/assets/img/icon-512.png' | absolute_url | jsonify }},
+  "image": {{ '/assets/img/og-image.png' | absolute_url | jsonify }},
+  "description": {{ site.description | strip_newlines | jsonify }},
   "email": "investors@northstone.invest",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "Bahnhofstrasse",
     "postalCode": "8001",
     "addressLocality": "Zurich",
+    "addressRegion": "Zurich",
     "addressCountry": "CH"
-  }
+  },
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Zurich, Switzerland"
+  },
+  "areaServed": ["Europe", "North America"],
+  "knowsAbout": [
+    "Governance, risk and compliance software",
+    "Private equity",
+    "Regulatory technology"
+  ],
+  "contactPoint": [
+    {
+      "@type": "ContactPoint",
+      "contactType": "investor relations",
+      "email": "investors@northstone.invest",
+      "areaServed": ["Europe", "North America"]
+    },
+    {
+      "@type": "ContactPoint",
+      "contactType": "founders and operators",
+      "email": "founders@northstone.invest"
+    }
+  ],
+  "sameAs": []
 }
 </script>

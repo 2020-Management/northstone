@@ -15,8 +15,20 @@ description: >-
 url: https://2020-management.github.io
 baseurl: ""
 
-author: Northstone Research
+author:
+  name: Northstone Research
 lang: en
+
+# Default social-share image (og:image / twitter:image) used by jekyll-seo-tag
+# on every page unless a page overrides it with its own `image:` front matter.
+# With an image present, jekyll-seo-tag emits twitter:card "summary_large_image"
+# automatically. When a real X/Twitter account exists, add:
+#   twitter:
+#     username: northstoneinvest   # → twitter:site / twitter:creator handles
+image: /assets/img/og-image.png
+
+# Logo used in the seo-tag Organization JSON-LD and search results.
+logo: /assets/img/icon-512.png
 
 # No theme — all styles live in assets/css. Prevents the bundled minima
 # theme from emitting an unused assets/css/style.css into the build.
@@ -52,6 +64,7 @@ defaults:
       path: ""
     values:
       layout: default
+      image: /assets/img/og-image.png
   - scope:
       path: ""
       type: insights

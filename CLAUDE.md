@@ -39,3 +39,15 @@ There is no test suite beyond htmlproofer. CI (`.github/workflows/jekyll.yml`) r
 
 - Match the existing voice/tone in copy — restrained, institutional PE register.
 - The contact form is static-only; it shows a thank-you state but submits nowhere. The wiring hook is marked in `assets/js/main.js`.
+
+## Clean code & simplicity
+
+This is a small static site. Bias hard toward the least code that solves the problem — favour Jekyll/Liquid and plain HTML/CSS over JS, and CSS over JS for anything that can be done with CSS.
+
+- **No speculative abstraction.** Don't add config, parameters, or "flexibility" that wasn't asked for. A single-use include or one-off style block beats a generic system. If you wrote 200 lines and it could be 50, rewrite it.
+- **Surgical changes.** Touch only what the task requires. Don't reformat, rename, or "improve" adjacent markup, copy, or CSS you weren't asked to change. Match the surrounding style even if you'd do it differently. If you spot unrelated dead code, mention it — don't delete it.
+- **Reuse what exists.** Before adding a component, check `_includes/`, `main.css`, and existing pages for a pattern to follow or extend (e.g. `news-row.html`, the `.motif` frame, `.eyebrow` rules). Reuse design tokens from `tokens.css` rather than introducing new literal values.
+- **DRY via includes and the layout chain**, not copy-paste. Shared markup belongs in `_includes/`; shared structure in `_layouts/`. Pages should declare only what differs.
+- **Keep JS minimal and isolated.** Each behaviour in `main.js` is a small self-contained init function that no-ops when its target isn't on the page — follow that shape, and don't reach for JS when HTML/CSS suffices.
+- **Clean up your own orphans.** Remove styles, includes, or JS that your change made unused; leave pre-existing dead code alone unless asked.
+- **Name things plainly.** Class names, slugs, and front-matter keys should read like the existing ones — descriptive, kebab-case, no cleverness.
