@@ -1,35 +1,40 @@
 ---
-title: "From point tools to platforms: the discipline of consolidating GRC."
+title: "Von Einzelwerkzeugen zu Plattformen: die Disziplin der Konsolidierung."
 category: Perspective
 date: 2025-11-01
-read_time: "8 min read"
-standfirst: "A market of single-purpose tools whose obligations share the same underlying objects is the most legible buy-and-build setup in enterprise software — and the easiest to execute badly."
-summary: "GRC fragmented because each obligation spawned its own tool. Consolidation works here because the obligations share data, controls and evidence — but only for the owner with the architecture and patience to make a suite, not a roll-up."
+read_time: "8 Min. Lesezeit"
+lang: de
+permalink: /insights/point-tools-to-platforms/
+alternate_url: /en/insights/point-tools-to-platforms/
+standfirst: "Ein Markt aus Einzelzweck-Softwarewerkzeugen, deren Arbeit auf denselben zugrunde liegenden Objekten beruht, ist die lesbarste Buy-and-Build-Ausgangslage der Unternehmenssoftware – und die am leichtesten schlecht auszuführende."
+summary: "Viele Softwarekategorien zersplitterten, weil jeder neue Bedarf sein eigenes Werkzeug hervorbrachte. Konsolidierung gelingt dort, wo diese Werkzeuge Daten und Arbeitsabläufe teilen – aber nur für den Eigentümer mit der Architektur und der Geduld, eine Suite zu bauen, keinen Roll-up."
 ---
 
-The governance, risk and compliance market was not designed; it was deposited, layer by layer, as each new obligation washed through. A supervisor demands third-party oversight, and a vendor-risk tool appears. A statute requires documented policies, and a policy-management product follows. Controls must be tested, so a testing tool arrives; incidents must be reported, so a reporting tool arrives after it. Every wave left a sediment of single-purpose software, and the typical regulated firm now runs several such tools side by side, reconciled by spreadsheets and the analysts who keep them current. The landscape is wide, capable and shallow: many good products, almost no platforms.
+Sehr viele Kategorien der Unternehmenssoftware wurden nicht entworfen; sie wurden Schicht für Schicht abgelagert, während jeder neue Bedarf durchschwappte. Ein Team muss eine Sache verfolgen, und ein Werkzeug erscheint. Ein zweiter Bedarf folgt, und ein zweites Werkzeug, gekauft von einer anderen Person unter einem anderen Budget. Die Arbeit überlappt darunter stark – dieselben Kunden, dieselben Datensätze, derselbe Arbeitsablauf aus einem leicht anderen Blickwinkel betrachtet –, doch die Werkzeuge tun es nicht, und das typische mittelständische Unternehmen betreibt am Ende mehrere nebeneinander, abgeglichen durch Tabellen und die Analysten, die sie aktuell halten. Die Landschaft ist breit, leistungsfähig und flach: viele gute Produkte, fast keine Plattformen. Das ist die lesbarste Buy-and-Build-Ausgangslage der Unternehmenssoftware und die These hinter vielem, das wir prüfen.
 
-Industry commentary routinely describes a field of a hundred or more vendors. Treat that as texture rather than a statistic, but the structure it points to is real, and it is the most legible buy-and-build setup in enterprise software today.
+Governance-, Risiko- und Compliance-Software ist das Beispiel, das wir am besten kennen, also nutzen wir es zur Veranschaulichung – doch das Muster ist allgemein und kehrt überall dort wieder, wo Pflichten oder Bedürfnisse einzeln auf dieselbe Population treffen. Die Disziplin, die daraus Wert macht, ist unabhängig von der Kategorie dieselbe.
 
-## Why the obligations themselves invite consolidation
+## Warum die Arbeit selbst zur Konsolidierung einlädt
 
-The case for consolidation is not the generic one — fewer logos, one invoice. It rests on a specific feature of how modern regulation is written: the obligations share underlying objects. The same supplier that sits in a firm's vendor-risk tool is also a line in the register of contractual arrangements that DORA, Regulation (EU) 2022/2554, requires every in-scope financial entity to maintain at entity, sub-consolidated and consolidated levels under Article 28(3). The same control that a testing tool exercises is the control a policy references and an incident invokes. When a major ICT incident is classified against the seven materiality criteria set out in the incident-classification RTS, Commission Delegated Regulation (EU) 2024/1772, the firm needs the affected services, the implicated third parties and the relevant controls in one coherent record — not scattered across four subscriptions that disagree about what a "supplier" is.
+Das Argument für Konsolidierung ist nicht das generische – weniger Logos, eine Rechnung. Es beruht auf einem besonderen Merkmal dessen, wie diese Märkte strukturiert sind: Die Werkzeuge arbeiten auf gemeinsamen zugrunde liegenden Objekten. Derselbe Anbieter, der in einem Werkzeug sitzt, ist eine Zeile im Register eines anderen; dieselbe Kontrolle, die ein drittes Werkzeug testet, ist jene, auf die sich ein viertes bezieht. Wenn etwas durchgängig bewertet werden muss, braucht das Unternehmen die betroffenen Einheiten, die beteiligten Parteien und die relevanten Datensätze an einem stimmigen Ort – nicht verstreut über vier Abonnements, die sich uneinig sind, was ein „Anbieter" oder ein „Kunde" überhaupt ist.
 
-Fragmented tooling forces firms to maintain the same entities, controls and evidence several times over, in formats that do not reconcile. A platform that holds them once removes that duplication at the root. The buyer stops paying people to keep four databases agreeing with each other; the owner inherits a footprint that widens with every adjacent obligation a customer must meet.
+Im GRC-Fall ist das akut, weil die Regulierung die Überlappung ausdrücklich schreibt. Derselbe Dritte, der im Anbieter-Risikowerkzeug eines Unternehmens sitzt, ist auch eine Zeile im Register vertraglicher Vereinbarungen, das DORA, Verordnung (EU) 2022/2554, von jeder erfassten Finanzeinheit nach Artikel 28 Absatz 3 auf Ebene der Einheit, teilkonsolidiert und konsolidiert zu führen verlangt. Dieselbe Kontrolle, die ein Testwerkzeug ausübt, ist die Kontrolle, auf die sich eine Richtlinie bezieht und die ein Vorfall aufruft. Doch man braucht kein Gesetz, damit die Struktur hält – jeder Markt, in dem die Werkzeuge dieselbe Welt aus verschiedenen Fenstern beschreiben, ist ein Kandidat.
 
-> The prize is not a tidier vendor list. It is a single description of the firm's risk that every obligation can draw on at once.
+Zersplittertes Werkzeug zwingt Unternehmen, dieselben Einheiten, Datensätze und Nachweise mehrfach zu führen, in Formaten, die sich nicht abstimmen. Eine Plattform, die sie einmal hält, beseitigt diese Doppelung an der Wurzel. Der Käufer hört auf, Menschen dafür zu bezahlen, vier Datenbanken in Übereinstimmung zu halten; der Eigentümer erbt eine Fläche, die mit jedem angrenzenden Bedarf breiter wird, den ein Kunde erfüllen muss.
 
-## What separates a build from a roll-up
+> Der Gewinn ist keine ordentlichere Anbieterliste. Es ist eine einzige Beschreibung der Welt des Kunden, aus der jeder Arbeitsablauf zugleich schöpfen kann.
 
-Most roll-ups in this space fail for the same reason: they acquire revenue without acquiring coherence. Logos accumulate; the products never become a suite. The discipline that distinguishes a build is unglamorous and largely architectural.
+## Was einen Aufbau von einem Roll-up unterscheidet
 
-- A shared data model, so a supplier, a control or an incident is defined once and recognised by every module.
-- An integration roadmap with the authority to retire overlap, not merely route around it.
-- A cross-sell motion in which a customer who arrives for one obligation is met with the next before a rival is.
-- A pricing logic anchored to the breadth of obligations served, so the suite is worth more than the sum of the tools it absorbs.
+Die meisten Roll-ups in zersplitterter Software scheitern aus demselben Grund: Sie erwerben Umsatz, ohne Kohärenz zu erwerben. Logos häufen sich; die Produkte werden nie eine Suite. Die Disziplin, die einen Aufbau auszeichnet, ist unglamourös und weitgehend architektonisch.
 
-The regulatory calendar supplies the demand. DORA has applied since 17 January 2025; NIS2, Directive (EU) 2022/2555, set a multi-stage incident cascade — an early warning within 24 hours, a fuller notification within 72, and a final report within one month of that notification — and member states were obliged to transpose it by 17 October 2024, a deadline so widely missed that the Commission opened infringement proceedings against 23 of them in November 2024. Each regime arrives with its own clocks, registers and reports, and each tempts the market to spawn yet another point tool. The consolidator's task is to absorb that incoming obligation into an existing model rather than answer it with a fresh acquisition.
+- Ein gemeinsames Datenmodell, sodass eine Einheit, ein Datensatz oder ein Ereignis einmal definiert und von jedem Modul erkannt wird.
+- Eine Integrations-Roadmap mit der Befugnis, Überlappung auszumustern, nicht bloss zu umgehen.
+- Ein Cross-Sell-Ablauf, in dem einem Kunden, der für einen Bedarf kommt, der nächste begegnet, bevor es ein Wettbewerber tut.
+- Eine Preislogik, verankert in der Breite der Suite, sodass sie mehr wert ist als die Summe der Werkzeuge, die sie aufnimmt.
 
-## The honest caveat, and the discipline it implies
+Die Nachfrage wird durch das geliefert, was die Kategorie antreibt – in GRC ist es der regulatorische Kalender, der den Markt immer wieder verlockt, mit jedem neuen Regime ein weiteres Einzelwerkzeug hervorzubringen; in anderen Märkten sind es ein neuer Kanal, eine neue Datenquelle, eine neue betriebliche Anforderung. Die Aufgabe des Konsolidierers ist stets dieselbe: den eingehenden Bedarf in ein bestehendes Modell aufzunehmen, statt ihn mit einer frischen Übernahme zu beantworten, die nie integriert wird.
 
-The fragmentation is genuine; the headline numbers are not yet a basis for underwriting. Analyst houses disagree sharply on the prize. MarketsandMarkets sizes enterprise GRC at USD 20.56 billion in 2025; Grand View Research projects USD 134.86 billion by 2030. The gap is not error but definition — software alone versus software plus services, narrow GRC versus everything ESG and resilience adjacent. A consolidator who underwrites the larger number and builds for the smaller one will overpay. The work is to buy where the shared-data thesis actually holds, integrate with the patience the architecture demands, and let the obligations — which arrive on their own schedule, whatever the sentiment — accumulate against a single platform rather than across a portfolio of logos. That is the platform this market is missing, and the one Northstone sets out to build.
+## Der ehrliche Vorbehalt und die Disziplin, die er bedeutet
+
+Die Zersplitterung ist echt; die Schlagzeilen-Marktzahlen sind in der Regel keine Grundlage zum Zeichnen. In GRC sind sich die Analystenhäuser über den Preis uneinig – MarketsandMarkets bemisst Unternehmens-GRC auf 20,56 Milliarden USD 2025; Grand View Research prognostiziert 134,86 Milliarden USD bis 2030. Die Lücke ist kein Fehler, sondern Definition – Software allein gegenüber Software plus Dienstleistungen, enger Zuschnitt gegenüber allem Angrenzenden. Dieselbe Falle besteht in jeder zersplitterten Kategorie: Ein Erwerber, der die grössere Zahl zeichnet und für die kleinere baut, zahlt zu viel. Die Arbeit besteht darin, dort zu kaufen, wo die These der gemeinsamen Daten tatsächlich hält, mit der Geduld zu integrieren, die die Architektur verlangt, und die zugrunde liegenden Bedürfnisse – die nach ihrem eigenen Zeitplan eintreffen, wie auch immer die Stimmung ist – gegen eine einzige Plattform anwachsen zu lassen statt über ein Portfolio von Logos. Das ist die Plattform, die diesen Märkten fehlt, und die, die Northstone aufzubauen ansetzt.

@@ -1,8 +1,9 @@
 ---
-title: "Request the fund materials"
-description: "Fund I is open to qualified institutional, family-office and private investors. Request the materials and an introductory call with Northstone Invest."
-permalink: /contact/
+title: "Invest alongside us"
+description: "Two ways to invest alongside Northstone Invest — the Northstone Bond or an equity partnership — open to qualified institutional, family-office and private investors. Request the materials and an introductory call."
+permalink: /en/contact/
 nav: contact
+alternate_url: /kontakt/
 ---
 
 <section class="container contact-page">
@@ -14,8 +15,8 @@ nav: contact
         <span class="eyebrow-rule"></span>
         <span class="eyebrow-label" style="color: var(--accent);">Investor relations</span>
       </div>
-      <h1 class="contact-h1">Request the fund materials.</h1>
-      <p class="contact-intro">Fund I is offered to qualified institutional, family-office and eligible private investors, subject to verification under applicable law. Share a few details and we will confirm eligibility, send the materials and arrange an introductory call.</p>
+      <h1 class="contact-h1">Invest alongside us.</h1>
+      <p class="contact-intro">Two ways to invest alongside us — the Northstone Bond or an equity partnership — both offered to qualified institutional, family-office and eligible private investors, subject to verification under applicable law. Share a few details and we will confirm eligibility, send the materials and arrange an introductory call.</p>
 
       <div class="detail-list">
         <div class="detail">
@@ -63,23 +64,34 @@ nav: contact
             </select>
           </label>
         </div>
-        <label class="field">
-          <span class="field-label">Country / jurisdiction</span>
-          <input type="text" name="country" placeholder="Switzerland">
-        </label>
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Country / jurisdiction</span>
+            <input type="text" name="country" placeholder="Switzerland">
+          </label>
+          <label class="field">
+            <span class="field-label">Interested in</span>
+            <select name="instrument">
+              <option value="">Select…</option>
+              <option>The Northstone Bond</option>
+              <option>Equity partnership</option>
+              <option>Both / undecided</option>
+            </select>
+          </label>
+        </div>
         <label class="field">
           <span class="field-label">Anything we should know? <span class="optional">(optional)</span></span>
           <textarea name="message" rows="4" placeholder="Mandate, ticket size, timing…"></textarea>
         </label>
-        <button type="submit" class="btn btn--accent form-submit">Request fund materials →</button>
-        <p class="form-fineprint">By submitting, you agree to be contacted by Northstone Invest regarding Fund I. We use your details only to respond to your enquiry and never share them with third parties.</p>
+        <button type="submit" class="btn btn--accent form-submit">Request the materials →</button>
+        <p class="form-fineprint">By submitting, you agree to be contacted by Northstone Invest regarding the Northstone Bond and equity partnership. We use your details only to respond to your enquiry and never share them with third parties.</p>
       </form>
 
       <div class="form-thanks" id="inquiry-thanks" hidden>
         <span class="thanks-check" aria-hidden="true">✓</span>
         <h2>Thank you — request received.</h2>
-        <p>A member of the Northstone team will be in touch shortly to share the fund materials and arrange a call.</p>
-        <a href="{{ '/' | relative_url }}">← Back to home</a>
+        <p>A member of the Northstone team will be in touch shortly to share the materials and arrange a call.</p>
+        <a href="{{ '/en/' | relative_url }}">← Back to home</a>
       </div>
     </div>
 

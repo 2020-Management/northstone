@@ -1,9 +1,10 @@
 ---
 layout: default
 ---
+{% if page.lang == 'en' %}{% assign insights_index = '/en/insights/' %}{% else %}{% assign insights_index = '/insights/' %}{% endif %}
 <article class="article">
   <div class="article-head">
-    <a href="{{ '/insights/' | relative_url }}" class="article-back">← Insights</a>
+    <a href="{{ insights_index | relative_url }}" class="article-back">← Insights</a>
     <div class="meta-row article-meta">
       <span class="meta-category">{{ page.category }}</span>
       <span class="meta-date">{{ page.date | date: "%B %Y" }}</span>
@@ -46,11 +47,22 @@ layout: default
     {{ content }}
   </div>
 
+  {% if page.lang == 'en' %}
+    {% assign cta_title = 'Investing in durable software businesses.' %}
+    {% assign cta_sub = 'Two ways to invest alongside us — open to qualified investors.' %}
+    {% assign cta_link = '/en/contact/' %}
+    {% assign cta_label = 'Invest alongside us →' %}
+  {% else %}
+    {% assign cta_title = 'Investitionen in beständige Softwaregeschäfte.' %}
+    {% assign cta_sub = 'Zwei Wege, gemeinsam mit uns zu investieren — offen für qualifizierte Anleger.' %}
+    {% assign cta_link = '/kontakt/' %}
+    {% assign cta_label = 'Gemeinsam investieren →' %}
+  {% endif %}
   <div class="article-cta">
     <div>
-      <div class="article-cta-title">Investing in the infrastructure of compliance.</div>
-      <div class="article-cta-sub">Fund I is open to qualified investors.</div>
+      <div class="article-cta-title">{{ cta_title }}</div>
+      <div class="article-cta-sub">{{ cta_sub }}</div>
     </div>
-    <a href="{{ '/contact/' | relative_url }}" class="btn btn--accent">Request fund materials →</a>
+    <a href="{{ cta_link | relative_url }}" class="btn btn--accent">{{ cta_label }}</a>
   </div>
 </article>

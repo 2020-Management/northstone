@@ -1,8 +1,9 @@
 title: Northstone Invest
 description: >-
-  Northstone Invest is a Zurich-based private equity firm backing the
-  governance, risk and compliance (GRC) software companies that build the
-  controls, risk and compliance infrastructure regulated industries depend on.
+  Northstone Invest ist eine Zürcher Beteiligungsgesellschaft, die in
+  Softwareunternehmen mit wiederkehrenden Umsätzen und verteidigbaren
+  Positionen investiert. Partner werden über Eigenkapital Miteigentümer der
+  Beteiligungen.
 
 # Origin used for canonical URLs, og:url and sitemap entries.
 # This is a *project* Pages site served at https://2020-management.github.io/northstone/.
@@ -17,7 +18,7 @@ baseurl: ""
 
 author:
   name: Northstone Research
-lang: en
+lang: de
 
 # Default social-share image (og:image / twitter:image) used by jekyll-seo-tag
 # on every page unless a page overrides it with its own `image:` front matter.
@@ -38,16 +39,14 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Insights articles live in the _insights collection and are served at
-# /insights/<slug>/. News items live in the _news collection; they are not
-# rendered as standalone pages (output: false) — each item links either to
-# external press coverage (external_url) or to the /news/ index.
+# Insights articles live in the _insights collection. German articles are
+# served at /insights/<slug>/ and English ones at /en/insights/<slug>/
+# (each EN file sets its own permalink). Articles carry a `lang` so the index
+# pages can show the right set.
 collections:
   insights:
     output: true
     permalink: /insights/:name/
-  news:
-    output: false
 
 exclude:
   - README.md
@@ -57,14 +56,23 @@ exclude:
   - vendor
   - .bundle
 
-# Apply the default layout and a sensible category fallback everywhere so
-# individual pages only declare what differs (title, description, etc.).
+# Apply layout, language and locale by path so individual pages only declare
+# what differs (title, description, alternate_url). German is the default and
+# lives at the root; English lives under /en/.
 defaults:
   - scope:
       path: ""
     values:
       layout: default
+      lang: de
+      locale: de_CH
       image: /assets/img/og-image.png
+  - scope:
+      path: "en"
+    values:
+      layout: default
+      lang: en
+      locale: en_US
   - scope:
       path: ""
       type: insights

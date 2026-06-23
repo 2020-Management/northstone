@@ -1,9 +1,11 @@
 # Northstone Invest — marketing site
 
-Static marketing site for Northstone Invest, a Zurich-based private
-equity firm investing in GRC software companies. Built with **Jekyll** and
-deployed to **GitHub Pages**. Plain HTML, CSS and a little vanilla JS — no build
-step beyond Jekyll, no framework.
+Static marketing site for Northstone Invest, a Zurich-based investment firm
+backing software companies with durable, recurring revenue (with particular
+conviction in the software regulated industries depend on). The site is
+**bilingual** — German is the default at the root, English lives under `/en/`.
+Built with **Jekyll** and deployed to **GitHub Pages**. Plain HTML, CSS and a
+little vanilla JS — no build step beyond Jekyll, no framework.
 
 ## Stack
 
@@ -19,20 +21,37 @@ step beyond Jekyll, no framework.
 ## Structure
 
 ```
-_config.yml            Site config + the `insights` and `news` collections
+_config.yml            Site config + the `insights` collection; path-based
+                       language defaults (root = de, /en = en)
 _layouts/
   default.html         Page shell (head, header, content, footer)
-  article.html         Insights article wrapper
+  article.html         Insights article wrapper (language-aware CTA + links)
 _includes/
-  head.html  header.html  footer.html  structured-data.html  news-row.html
-_insights/             One Markdown file per article (the insights collection)
-_news/                 One Markdown file per press item (the news collection)
-index.html             Homepage
-contact.html           Investor-relations page + inquiry form  → /contact/
-insights.html          Insights index (featured + filterable grid) → /insights/
-news.html              News index (press coverage + announcements) → /news/
+  head.html  header.html  footer.html  structured-data.html
+                       header/footer are bilingual: labels, anchors and the
+                       EN/DE switcher swap on page.lang
+_insights/             One Markdown file per article. German files use the
+                       clean slug; English ones add a `-en` suffix and their
+                       own /en/insights/ permalink (the collection is shared)
+index.html             Homepage — German (default)           → /
+kontakt.html           Investor-relations page + form — DE    → /kontakt/
+insights.html          Insights index — DE                    → /insights/
+datenschutz.html       Privacy notice — DE                    → /datenschutz/
+en/
+  index.html  contact.html  insights.html  privacy.html       → /en/...
 assets/                css / js / fonts / img
 ```
+
+## Languages
+
+German is the default and lives at the root; English lives under `/en/`. The
+language each page renders in comes from path-based `defaults` in `_config.yml`
+(`lang: de` at the root, `lang: en` under `en/`); collection articles set
+`lang` in their own front matter. Every page sets an `alternate_url` pointing
+at its counterpart, which powers the EN/DE switcher in the header (a page with
+no counterpart shows the other label as inert text). Insights index pages
+filter `site.insights` by `page.lang`, so each language shows only its own
+articles.
 
 ## Local development
 
@@ -50,14 +69,19 @@ bundle exec htmlproofer ./_site --disable-external --allow-hash-href
 
 ## Adding an Insights article
 
-Drop a Markdown file in `_insights/`. Front matter:
+Add the article twice — once per language — in `_insights/`. The German file
+takes the clean slug; the English one adds a `-en` suffix and sets its own
+`/en/insights/` permalink. Front matter (German example):
 
 ```yaml
 ---
 title: "…"
 category: Regulation        # Regulation | Markets | Perspective | Portfolio
 date: 2026-03-01
-read_time: "6 min read"
+read_time: "7 Min. Lesezeit"
+lang: de
+permalink: /insights/your-slug/
+alternate_url: /en/insights/your-slug/
 standfirst: "One-line italic intro shown under the title."
 summary: "Short teaser used on cards and the index."
 featured: true              # optional — promotes it to the index hero
@@ -66,8 +90,13 @@ featured: true              # optional — promotes it to the index hero
 Body in Markdown. `##` becomes a subhead, `>` a pullquote, `-` a list.
 ```
 
-It appears automatically on the Insights index and (for the three newest) on
-the homepage. Categories map to the filter chips on `/insights/`.
+The English counterpart (`your-slug-en.md`) is identical but with `lang: en`,
+`permalink: /en/insights/your-slug/` and `alternate_url: /insights/your-slug/`.
+`category` stays in English in both files — it's a stable key the filter chips
+match on; only the chip *labels* are translated per page.
+
+Each article appears automatically on its language's Insights index and (for
+the three newest) on that language's homepage.
 
 ## Deployment
 

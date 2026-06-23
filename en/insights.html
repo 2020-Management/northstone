@@ -1,33 +1,33 @@
 ---
 title: "Insights"
-description: "Perspektiven auf Unternehmenssoftware und die beständige Nachfrage dahinter — von Northstone Research."
-permalink: /insights/
+description: "Perspectives on enterprise software and the durable demand behind it — from Northstone Research."
+permalink: /en/insights/
 nav: insights
-alternate_url: /en/insights/
+alternate_url: /insights/
 ---
 
-{% assign all_insights = site.insights | where: "lang", "de" %}
+{% assign all_insights = site.insights | where: "lang", "en" %}
 {% assign posts = all_insights | sort: "date" | reverse %}
 {% assign featured = posts | where: "featured", true | first %}
 {% unless featured %}{% assign featured = posts | first %}{% endunless %}
 
-<!-- Seitenkopf -->
+<!-- Page head -->
 <section class="container insights-page-head">
   <div class="eyebrow eyebrow--rule">
     <span class="eyebrow-rule"></span>
     <span class="eyebrow-label" style="color: var(--accent);">Insights</span>
   </div>
-  <h1 class="insights-h1">Perspektiven auf Unternehmenssoftware und die Nachfrage dahinter.</h1>
+  <h1 class="insights-h1">Perspectives on enterprise software and the demand behind it.</h1>
   <div class="filter-row">
-    <button class="chip-filter is-active" data-filter="all">Alle</button>
-    <button class="chip-filter" data-filter="Regulation">Regulierung</button>
-    <button class="chip-filter" data-filter="Markets">Märkte</button>
-    <button class="chip-filter" data-filter="Perspective">Perspektive</button>
+    <button class="chip-filter is-active" data-filter="all">All</button>
+    <button class="chip-filter" data-filter="Regulation">Regulation</button>
+    <button class="chip-filter" data-filter="Markets">Markets</button>
+    <button class="chip-filter" data-filter="Perspective">Perspective</button>
     <button class="chip-filter" data-filter="Portfolio">Portfolio</button>
   </div>
 </section>
 
-<!-- Hervorgehoben -->
+<!-- Featured -->
 <section class="container featured" data-category="{{ featured.category }}">
   <a href="{{ featured.url | relative_url }}" class="featured-link">
     <div class="motif motif--feature" aria-hidden="true">
@@ -40,16 +40,16 @@ alternate_url: /en/insights/
     <div>
       <div class="meta-row">
         <span>{{ featured.category }}</span>
-        <span class="meta-date">{{ featured.date | date: "%b %Y" }} · Hervorgehoben</span>
+        <span class="meta-date">{{ featured.date | date: "%b %Y" }} · Featured</span>
       </div>
       <h2 class="featured-title">{{ featured.title }}</h2>
       <p class="featured-summary">{{ featured.summary }}</p>
-      <span class="featured-cta">Artikel lesen →</span>
+      <span class="featured-cta">Read the article →</span>
     </div>
   </a>
 </section>
 
-<!-- Raster (alle ausser dem hervorgehobenen Artikel) -->
+<!-- Grid (all but the featured article) -->
 <section class="container insights-grid">
   <div class="card-grid">
     {% for post in posts %}
@@ -65,5 +65,5 @@ alternate_url: /en/insights/
     {% endunless %}
     {% endfor %}
   </div>
-  <p class="insights-empty" hidden>Noch keine Perspektiven in dieser Kategorie.</p>
+  <p class="insights-empty" hidden>No perspectives in this category yet.</p>
 </section>

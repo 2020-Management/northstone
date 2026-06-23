@@ -1,41 +1,43 @@
 ---
-title: "DORA made resilience an evidenced obligation. That is a category."
+title: "DORA hat Resilienz zur nachzuweisenden Pflicht gemacht. Das ist eine Kategorie."
 category: Regulation
 date: 2026-03-01
-read_time: "8 min read"
-featured: true
-standfirst: "Since 17 January 2025, a European financial entity must not merely intend to be resilient. It must be able to prove it, on a supervisor's clock."
-summary: "DORA turned operational resilience from documented policy into a supervised, evidenced obligation for the financial sector — and the evidence has to be produced on a regulator's clock, not the firm's."
+read_time: "8 Min. Lesezeit"
+lang: de
+permalink: /insights/dora-operational-resilience/
+alternate_url: /en/insights/dora-operational-resilience/
+standfirst: "Seit dem 17. Januar 2025 darf eine europäische Finanzeinheit nicht bloss beabsichtigen, resilient zu sein. Sie muss es beweisen können – nach der Uhr der Aufsichtsbehörde."
+summary: "DORA hat operative Resilienz von dokumentierter Richtlinie zu einer beaufsichtigten, nachzuweisenden Pflicht für den Finanzsektor gemacht – und der Nachweis muss nach der Uhr der Aufsichtsbehörde erbracht werden, nicht nach der des Unternehmens."
 ---
 
-For most of the post-crisis period, operational resilience in European finance lived in policy documents. A firm wrote down how it managed technology risk, reviewed the document annually, and was rarely asked to demonstrate that the described controls held. The Digital Operational Resilience Act ends that arrangement. Since 17 January 2025, the date from which Regulation (EU) 2022/2554 applies, resilience is not a stated intention a financial entity holds about itself. It is an obligation a supervisor can test, on timetables the firm does not set.
+Über weite Strecken der Zeit nach der Finanzkrise lebte operative Resilienz im europäischen Finanzwesen in Richtliniendokumenten. Ein Unternehmen hielt schriftlich fest, wie es Technologierisiken steuerte, überprüfte das Dokument jährlich und wurde selten aufgefordert nachzuweisen, dass die beschriebenen Kontrollen tatsächlich griffen. Der Digital Operational Resilience Act beendet diese Praxis. Seit dem 17. Januar 2025, dem Geltungsbeginn der Verordnung (EU) 2022/2554, ist Resilienz keine erklärte Absicht mehr, die eine Finanzeinheit über sich selbst hegt. Sie ist eine Pflicht, die eine Aufsichtsbehörde überprüfen kann – nach Fristen, die das Unternehmen nicht setzt.
 
-This is why we treat DORA as a category-forming event rather than another compliance burden. A regime that asks for a policy is satisfied by a well-drafted document. A regime that asks for evidence, produced to a deadline and reconcilable against a register, requires a system that captures the activity as it happens and can reproduce it later in the form a regulator expects.
+Deshalb behandeln wir DORA als kategoriebildendes Ereignis und nicht als weitere Compliance-Last. Ein Regime, das eine Richtlinie verlangt, ist mit einem gut formulierten Dokument zufrieden. Ein Regime, das einen Nachweis verlangt – fristgerecht erbracht und gegen ein Register abstimmbar –, erfordert ein System, das die Aktivität im Moment ihres Entstehens erfasst und sie später in der von einer Aufsichtsbehörde erwarteten Form reproduzieren kann.
 
-## What DORA actually requires
+## Was DORA tatsächlich verlangt
 
-DORA is a Regulation, not a Directive. It binds in its entirety and applies directly across every Member State, without the national transposition that staggers and dilutes a directive such as NIS2. There is no patchwork of local implementing laws to wait for. The obligation arrived everywhere at once, in identical terms, structured around five pillars that each demand something a spreadsheet handles badly.
+DORA ist eine Verordnung, keine Richtlinie. Sie ist in allen ihren Teilen verbindlich und gilt unmittelbar in jedem Mitgliedstaat, ohne die nationale Umsetzung, die eine Richtlinie wie NIS2 staffelt und verwässert. Es gibt keinen Flickenteppich lokaler Umsetzungsgesetze, auf den man warten müsste. Die Pflicht traf überall zugleich ein, in identischen Worten, gegliedert in fünf Säulen, von denen jede etwas verlangt, mit dem eine Tabellenkalkulation schlecht umgeht.
 
-- ICT risk management, with the management body bearing ultimate, named responsibility under Article 5 for the framework it must define, approve and oversee.
-- ICT-related incident management, classification and reporting against defined materiality thresholds.
-- Digital operational resilience testing, including threat-led penetration testing for significant entities.
-- ICT third-party risk management, including a maintained register of information on every contractual arrangement for ICT services.
-- Information and intelligence sharing on cyber threats.
+- IKT-Risikomanagement, wobei das Leitungsorgan nach Artikel 5 die letztliche, namentliche Verantwortung für den Rahmen trägt, den es definieren, genehmigen und überwachen muss.
+- Management, Klassifizierung und Meldung IKT-bezogener Vorfälle anhand definierter Wesentlichkeitsschwellen.
+- Tests der digitalen operativen Resilienz, einschliesslich bedrohungsorientierter Penetrationstests für bedeutende Einheiten.
+- Management des IKT-Drittparteienrisikos, einschliesslich eines geführten Informationsregisters über jede vertragliche Vereinbarung für IKT-Dienstleistungen.
+- Austausch von Informationen und Erkenntnissen über Cyberbedrohungen.
 
-Read together, these are not five documents. They are five live processes, each generating an audit trail a supervisor is entitled to inspect. That is the structural fact that creates durable software demand.
+Zusammen gelesen sind das nicht fünf Dokumente. Es sind fünf laufende Prozesse, von denen jeder eine Prüfspur erzeugt, die eine Aufsichtsbehörde einsehen darf. Das ist der strukturelle Umstand, der beständige Software-Nachfrage schafft.
 
-## The clocks are the point
+## Die Uhren sind der Punkt
 
-Consider incident reporting, the pillar where intent and evidence diverge most sharply. Under the reporting standard, Commission Delegated Regulation (EU) 2025/301, a financial entity that classifies an incident as major must file an initial notification within four hours of that classification, and in any case no later than twenty-four hours from becoming aware of the incident. An intermediate report follows within seventy-two hours of that initial notification, and a final report, with root-cause analysis, no later than one month after the intermediate report.
+Man betrachte die Vorfallmeldung, jene Säule, in der Absicht und Nachweis am schärfsten auseinandertreten. Nach dem Meldestandard, der Delegierten Verordnung (EU) 2025/301 der Kommission, muss eine Finanzeinheit, die einen Vorfall als schwerwiegend klassifiziert, innerhalb von vier Stunden nach dieser Klassifizierung eine Erstmeldung einreichen, in jedem Fall jedoch spätestens vierundzwanzig Stunden, nachdem sie von dem Vorfall Kenntnis erlangt hat. Ein Zwischenbericht folgt innerhalb von zweiundsiebzig Stunden nach dieser Erstmeldung, und ein Abschlussbericht mit Ursachenanalyse spätestens einen Monat nach dem Zwischenbericht.
 
-> No firm assembles a four-hour regulatory filing from a folder of policy PDFs; the clock is short precisely because the regulator assumes the evidence already exists in a system.
+> Kein Unternehmen stellt eine aufsichtsrechtliche Meldung in vier Stunden aus einem Ordner voller Richtlinien-PDFs zusammen; die Frist ist gerade deshalb so kurz, weil die Aufsichtsbehörde voraussetzt, dass der Nachweis bereits in einem System vorliegt.
 
-Whether an incident is even classified as major is itself a structured determination, made against the seven criteria set out in the classification standard, Commission Delegated Regulation (EU) 2024/1772, combining the criticality of affected services with data-loss and other materiality thresholds. A firm that cannot continuously evaluate live incidents against those criteria will miss the four-hour window not through negligence but architecture. The deadline is, in effect, a software requirement disguised as a reporting rule.
+Ob ein Vorfall überhaupt als schwerwiegend klassifiziert wird, ist selbst eine strukturierte Feststellung, getroffen anhand der sieben Kriterien des Klassifizierungsstandards, der Delegierten Verordnung (EU) 2024/1772 der Kommission, die die Kritikalität betroffener Dienste mit Datenverlust- und anderen Wesentlichkeitsschwellen verbindet. Ein Unternehmen, das laufende Vorfälle nicht fortlaufend an diesen Kriterien messen kann, verfehlt das Vier-Stunden-Fenster nicht aus Nachlässigkeit, sondern aus Architektur. Die Frist ist im Ergebnis eine Software-Anforderung im Gewand einer Meldevorschrift.
 
-## Third parties, tested defences, and a supervised perimeter
+## Dritte, getestete Abwehr und ein beaufsichtigter Perimeter
 
-The same logic runs through the other pillars. The register of information required under Article 28 is not a contracts list; it is submitted to competent authorities annually and on request, at entity, sub-consolidated and consolidated levels, and it must reconcile. Its quality has already become consequential: when the European Supervisory Authorities designated the first batch of critical ICT third-party providers in November 2025, that list was drawn directly from the registers financial entities had filed. A weak register is now a supervised exposure, not an internal housekeeping matter.
+Dieselbe Logik zieht sich durch die übrigen Säulen. Das nach Artikel 28 verlangte Informationsregister ist keine Vertragsliste; es wird den zuständigen Behörden jährlich und auf Anfrage übermittelt, auf Ebene der Einheit, teilkonsolidiert und konsolidiert, und es muss in sich stimmig sein. Seine Qualität ist bereits folgenreich geworden: Als die Europäischen Aufsichtsbehörden im November 2025 die erste Gruppe kritischer IKT-Drittdienstleister benannten, wurde diese Liste unmittelbar aus den Registern abgeleitet, die die Finanzeinheiten eingereicht hatten. Ein schwaches Register ist heute ein beaufsichtigtes Risiko, keine interne Verwaltungsangelegenheit.
 
-Testing tightens the perimeter further. Entities identified by their competent authority as significant must conduct advanced testing by means of threat-led penetration testing at least every three years, built on the European Central Bank's TIBER-EU framework under Article 26. This is not a questionnaire. It is adversarial assessment whose scope, findings and remediation must be governed and evidenced over multi-year cycles. Above it all sits the EU Oversight Framework, under which designated critical providers answer to a Lead Overseer with powers of inspection.
+Tests verengen den Perimeter weiter. Einheiten, die von ihrer zuständigen Behörde als bedeutend eingestuft werden, müssen nach Artikel 26 mindestens alle drei Jahre fortgeschrittene Tests in Form bedrohungsorientierter Penetrationstests durchführen, aufgebaut auf dem TIBER-EU-Rahmenwerk der Europäischen Zentralbank. Das ist kein Fragebogen. Es ist eine gegnerische Bewertung, deren Umfang, Befunde und Behebung über mehrjährige Zyklen gesteuert und nachgewiesen werden müssen. Über allem steht der EU-Überwachungsrahmen, unter dem benannte kritische Anbieter einem federführenden Überwacher mit Prüfbefugnissen Rechenschaft schulden.
 
-The investment conclusion follows from these specifics. DORA has fixed, across an entire continent's financial sector, a set of processes that must run continuously, reconcile against each other, and surface evidence to a supervisor on demand and on deadline. That is an unusually precise specification for a software market: the buyer is identifiable, the obligation uniform, and the standard of proof set by a regulator rather than negotiated with a customer. We invest behind the firms building to that specification, because the demand they serve is written into binding European law and enforced by people with the power to inspect.
+Die Anlageschlussfolgerung folgt aus diesen Einzelheiten. DORA hat über den gesamten Finanzsektor eines Kontinents hinweg eine Reihe von Prozessen festgeschrieben, die fortlaufend laufen, sich gegenseitig abstimmen und einer Aufsichtsbehörde auf Anfrage und auf Frist Nachweise liefern müssen. Das ist eine ungewöhnlich präzise Spezifikation für einen Softwaremarkt: Der Käufer ist identifizierbar, die Pflicht einheitlich, und der Beweismassstab wird von einer Aufsichtsbehörde gesetzt statt mit einem Kunden ausgehandelt. Wir investieren hinter den Unternehmen, die nach dieser Spezifikation bauen, weil die Nachfrage, die sie bedienen, in verbindlichem europäischem Recht steht und von Menschen mit Prüfbefugnis durchgesetzt wird.

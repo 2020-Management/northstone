@@ -1,23 +1,65 @@
+{% comment %}
+  Bilingual header. German is the default (root); English lives under /en/.
+  Nav labels, section-anchor slugs and the home URL switch on page.lang.
+  The language switch links to page.alternate_url (set per page); when a page
+  has no counterpart it shows the other label as inert text.
+{% endcomment %}
+{% if page.lang == 'en' %}
+  {% assign home_url = '/en/' %}
+  {% assign insights_url = '/en/insights/' %}
+  {% assign contact_url = '/en/contact/' %}
+  {% assign nav_aria = 'Main navigation' %}
+  {% assign nav_thesis = 'Thesis' %}
+  {% assign nav_approach = 'Approach' %}
+  {% assign nav_portfolio = 'Portfolio' %}
+  {% assign nav_insights = 'Insights' %}
+  {% assign nav_contact = 'Investor relations' %}
+  {% assign anchor_thesis = 'thesis' %}
+  {% assign anchor_approach = 'approach' %}
+  {% assign anchor_portfolio = 'portfolio' %}
+  {% assign menu_label = 'Menu' %}
+  {% assign self_label = 'EN' %}
+  {% assign other_label = 'DE' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign insights_url = '/insights/' %}
+  {% assign contact_url = '/kontakt/' %}
+  {% assign nav_aria = 'Hauptnavigation' %}
+  {% assign nav_thesis = 'These' %}
+  {% assign nav_approach = 'Ansatz' %}
+  {% assign nav_portfolio = 'Portfolio' %}
+  {% assign nav_insights = 'Insights' %}
+  {% assign nav_contact = 'Investor Relations' %}
+  {% assign anchor_thesis = 'these' %}
+  {% assign anchor_approach = 'ansatz' %}
+  {% assign anchor_portfolio = 'portfolio' %}
+  {% assign menu_label = 'Menü' %}
+  {% assign self_label = 'DE' %}
+  {% assign other_label = 'EN' %}
+{% endif %}
+
 <header class="site-header">
   <div class="container site-header-inner">
-    <a href="{{ '/' | relative_url }}" class="brand" aria-label="Northstone Invest — home">
+    <a href="{{ home_url | relative_url }}" class="brand" aria-label="Northstone Invest — home">
       <span class="brand-mark" aria-hidden="true"></span>
       <span class="brand-word">Northstone</span>
       <span class="brand-tag">Invest</span>
     </a>
 
-    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="{{ menu_label }}">
       <span class="nav-toggle-bar"></span>
       <span class="nav-toggle-bar"></span>
     </button>
 
-    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
-      <a href="{{ '/#thesis' | relative_url }}">Thesis</a>
-      <a href="{{ '/#approach' | relative_url }}">Approach</a>
-      <a href="{{ '/#portfolio' | relative_url }}">Portfolio</a>
-      <a href="{{ '/insights/' | relative_url }}"{% if page.nav == 'insights' %} class="is-current" aria-current="page"{% endif %}>Insights</a>
-      <a href="{{ '/news/' | relative_url }}"{% if page.nav == 'news' %} class="is-current" aria-current="page"{% endif %}>News</a>
-      <a href="{{ '/contact/' | relative_url }}" class="btn btn--dark">Investor relations</a>
+    <nav class="site-nav" id="site-nav" aria-label="{{ nav_aria }}">
+      <a href="{{ home_url | append: '#' | append: anchor_thesis | relative_url }}">{{ nav_thesis }}</a>
+      <a href="{{ home_url | append: '#' | append: anchor_approach | relative_url }}">{{ nav_approach }}</a>
+      <a href="{{ home_url | append: '#' | append: anchor_portfolio | relative_url }}">{{ nav_portfolio }}</a>
+      <a href="{{ insights_url | relative_url }}"{% if page.nav == 'insights' %} class="is-current" aria-current="page"{% endif %}>{{ nav_insights }}</a>
+      <a href="{{ contact_url | relative_url }}" class="btn btn--dark">{{ nav_contact }}</a>
+      <span class="lang">
+        <span class="lang-active">{{ self_label }}</span>&nbsp;/&nbsp;{% if page.alternate_url %}<a href="{{ page.alternate_url | relative_url }}">{{ other_label }}</a>{% else %}<span class="lang-inert">{{ other_label }}</span>{% endif %}
+      </span>
     </nav>
   </div>
 </header>

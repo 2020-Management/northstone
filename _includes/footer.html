@@ -1,22 +1,58 @@
+{% comment %}
+  Bilingual footer. Copy switches on page.lang; German is the default.
+{% endcomment %}
+{% if page.lang == 'en' %}
+  {% assign home_url = '/en/' %}
+  {% assign insights_url = '/en/insights/' %}
+  {% assign contact_url = '/en/contact/' %}
+  {% assign privacy_url = '/en/privacy/' %}
+  {% assign f_thesis = 'Thesis' %}
+  {% assign f_approach = 'Approach' %}
+  {% assign f_portfolio = 'Portfolio' %}
+  {% assign f_insights = 'Insights' %}
+  {% assign f_contact = 'Contact' %}
+  {% assign f_privacy = 'Privacy' %}
+  {% assign anchor_thesis = 'thesis' %}
+  {% assign anchor_approach = 'approach' %}
+  {% assign anchor_portfolio = 'portfolio' %}
+  {% assign f_refrain = 'We invest in software companies — and open two ways to invest alongside us.' %}
+  {% assign f_legal = 'Northstone Invest · Zurich, Switzerland. This page is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security or financial instrument. Any offer is made solely to qualified investors through the formal subscription documents for the relevant instrument. © 2026 Northstone Invest.' %}
+{% else %}
+  {% assign home_url = '/' %}
+  {% assign insights_url = '/insights/' %}
+  {% assign contact_url = '/kontakt/' %}
+  {% assign privacy_url = '/datenschutz/' %}
+  {% assign f_thesis = 'These' %}
+  {% assign f_approach = 'Ansatz' %}
+  {% assign f_portfolio = 'Portfolio' %}
+  {% assign f_insights = 'Insights' %}
+  {% assign f_contact = 'Kontakt' %}
+  {% assign f_privacy = 'Datenschutz' %}
+  {% assign anchor_thesis = 'these' %}
+  {% assign anchor_approach = 'ansatz' %}
+  {% assign anchor_portfolio = 'portfolio' %}
+  {% assign f_refrain = 'Wir investieren in Softwareunternehmen – und eröffnen zwei Wege, gemeinsam mit uns zu investieren.' %}
+  {% assign f_legal = 'Northstone Invest · Zürich, Schweiz. Diese Seite dient ausschliesslich Informationszwecken und stellt weder ein Angebot zum Verkauf noch eine Aufforderung zum Kauf von Wertpapieren oder Finanzinstrumenten dar. Ein Angebot erfolgt ausschliesslich gegenüber qualifizierten Anlegern über die formellen Zeichnungsunterlagen des jeweiligen Instruments. © 2026 Northstone Invest.' %}
+{% endif %}
+
 <footer class="site-footer">
   <div class="container">
     <div class="site-footer-top">
-      <a href="{{ '/' | relative_url }}" class="brand" aria-label="Northstone Invest — home">
+      <a href="{{ home_url | relative_url }}" class="brand" aria-label="Northstone Invest — home">
         <span class="brand-mark" aria-hidden="true"></span>
         <span class="brand-word">Northstone</span>
         <span class="brand-tag">Invest</span>
       </a>
       <nav class="site-footer-nav" aria-label="Footer navigation">
-        <a href="{{ '/#thesis' | relative_url }}">Thesis</a>
-        <a href="{{ '/#approach' | relative_url }}">Approach</a>
-        <a href="{{ '/#portfolio' | relative_url }}">Portfolio</a>
-        <a href="{{ '/insights/' | relative_url }}">Insights</a>
-        <a href="{{ '/news/' | relative_url }}">News</a>
-        <a href="{{ '/contact/' | relative_url }}">Contact</a>
-        <a href="{{ '/privacy/' | relative_url }}">Privacy</a>
+        <a href="{{ home_url | append: '#' | append: anchor_thesis | relative_url }}">{{ f_thesis }}</a>
+        <a href="{{ home_url | append: '#' | append: anchor_approach | relative_url }}">{{ f_approach }}</a>
+        <a href="{{ home_url | append: '#' | append: anchor_portfolio | relative_url }}">{{ f_portfolio }}</a>
+        <a href="{{ insights_url | relative_url }}">{{ f_insights }}</a>
+        <a href="{{ contact_url | relative_url }}">{{ f_contact }}</a>
+        <a href="{{ privacy_url | relative_url }}">{{ f_privacy }}</a>
       </nav>
     </div>
-    <p class="site-footer-refrain">A single focus: the software that governs the regulated enterprise.</p>
-    <p class="site-footer-legal">Northstone Invest · Zurich, Switzerland. This page is for informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any security. Any offer is made solely to qualified investors through the fund's formal subscription documents. © 2026 Northstone Invest.</p>
+    <p class="site-footer-refrain">{{ f_refrain }}</p>
+    <p class="site-footer-legal">{{ f_legal }}</p>
   </div>
 </footer>
