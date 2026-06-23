@@ -4,11 +4,14 @@ description: >-
   governance, risk and compliance (GRC) software companies that build the
   controls, risk and compliance infrastructure regulated industries depend on.
 
-# Origin used for canonical URLs, og:url and sitemap entries.
-# When moving to a custom domain, change this to the new origin and
-# add the domain to a CNAME file at the repo root.
-url: https://example.github.io
-baseurl: ""
+# Origin + path used for canonical URLs, og:url and sitemap entries.
+# This is a *project* Pages site served at https://2020-management.github.io/northstone/.
+# The deploy workflow passes the correct --baseurl at build time regardless,
+# but these values drive the sitemap, robots.txt, canonical tags and local builds.
+# When moving to a custom domain: set `url` to the new origin, `baseurl` to "",
+# and add that domain to a CNAME file at the repo root.
+url: https://2020-management.github.io
+baseurl: /northstone
 
 author: Northstone Research
 lang: en
