@@ -68,8 +68,12 @@
   /* ---- Insights filter chips ---- */
   function initFilter() {
     var chips = document.querySelectorAll(".chip-filter");
-    var cards = document.querySelectorAll(".insights-grid .card[data-category]");
-    if (!chips.length || !cards.length) return;
+    // Filterable items: the featured block and every grid card carry data-category.
+    var items = document.querySelectorAll("[data-category]");
+    if (!chips.length || !items.length) return;
+
+    var grid = document.querySelector(".insights-grid .card-grid");
+    var empty = document.querySelector(".insights-empty");
 
     chips.forEach(function (chip) {
       chip.addEventListener("click", function () {
@@ -77,10 +81,16 @@
 
         chips.forEach(function (c) { c.classList.toggle("is-active", c === chip); });
 
-        cards.forEach(function (card) {
-          var show = filter === "all" || card.dataset.category === filter;
-          card.classList.toggle("is-hidden", !show);
+        var shown = 0;
+        items.forEach(function (item) {
+          var show = filter === "all" || item.dataset.category === filter;
+          item.classList.toggle("is-hidden", !show);
+          if (show) shown += 1;
         });
+
+        // Show an empty-state note when a category matches nothing.
+        if (empty) empty.hidden = shown !== 0;
+        if (grid) grid.hidden = shown === 0;
       });
     });
   }

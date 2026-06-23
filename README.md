@@ -83,3 +83,19 @@ The form validates client-side and shows a thank-you state. GitHub Pages is
 static, so it does not submit anywhere yet — wire it to a hosted form handler
 (Formspree, Web3Forms, a serverless function) at the marked hook in
 `assets/js/main.js` and set the form's `action`.
+
+## Imagery
+
+Lead/hero photography in `assets/img/*.webp` is architectural stock from
+[Unsplash](https://unsplash.com/license) (free, commercial use, no attribution
+required), processed to a navy duotone so it reads as part of the brand system.
+Each image sits inside the `.motif` frame as a `.motif-photo`, under the brass
+horizon line. Article lead images are chosen by `page.category` in
+`_layouts/article.html`; override per-article with an `image:` front-matter key
+pointing at a basename in `assets/img/` (e.g. `image: lead-markets`).
+
+Sources (Unsplash): hero — Alex Robertson (Plaza de España, Seville);
+regulation/featured — Niklas Weiss (Sultan Qaboos Grand Mosque, Muscat);
+markets — Sebastian Schuster; perspective — Mike Hindle; portfolio — Harrison
+Lin. The Zazoon block and the "to be announced" tiles deliberately keep their
+CSS motifs (the modular grid evokes the MyGRC suite; no fabricated screenshot).

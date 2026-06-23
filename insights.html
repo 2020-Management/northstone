@@ -26,9 +26,15 @@ nav: insights
 </section>
 
 <!-- Featured -->
-<section class="container featured">
+<section class="container featured" data-category="{{ featured.category }}">
   <a href="{{ featured.url | relative_url }}" class="featured-link">
-    <div class="motif motif--feature" aria-hidden="true"></div>
+    <div class="motif motif--feature" aria-hidden="true">
+      <img class="motif-photo"
+           src="{{ '/assets/img/featured.webp' | relative_url }}"
+           srcset="{{ '/assets/img/featured.webp' | relative_url }} 1200w, {{ '/assets/img/featured@2x.webp' | relative_url }} 2000w"
+           sizes="(max-width: 900px) 100vw, 600px"
+           width="1200" height="750" alt="" loading="lazy" decoding="async">
+    </div>
     <div>
       <div class="meta-row">
         <span>{{ featured.category }}</span>
@@ -57,4 +63,5 @@ nav: insights
     {% endunless %}
     {% endfor %}
   </div>
+  <p class="insights-empty" hidden>No perspectives in this category yet.</p>
 </section>

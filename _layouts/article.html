@@ -20,8 +20,25 @@ layout: default
     </div>
   </div>
 
+  {% comment %} Lead image: explicit page.image, else a per-category default. {% endcomment %}
+  {% assign lead = page.image %}
+  {% unless lead %}
+    {% case page.category %}
+      {% when 'Regulation' %}{% assign lead = 'lead-regulation' %}
+      {% when 'Markets' %}{% assign lead = 'lead-markets' %}
+      {% when 'Perspective' %}{% assign lead = 'lead-perspective' %}
+      {% when 'Portfolio' %}{% assign lead = 'lead-portfolio' %}
+      {% else %}{% assign lead = 'lead-regulation' %}
+    {% endcase %}
+  {% endunless %}
   <div class="article-lead">
-    <div class="motif motif--colonnade motif--wide" aria-hidden="true"></div>
+    <div class="motif motif--colonnade motif--wide" aria-hidden="true">
+      <img class="motif-photo"
+           src="{{ '/assets/img/' | append: lead | append: '.webp' | relative_url }}"
+           srcset="{{ '/assets/img/' | append: lead | append: '.webp' | relative_url }} 1400w, {{ '/assets/img/' | append: lead | append: '@2x.webp' | relative_url }} 2520w"
+           sizes="(max-width: 980px) 100vw, 980px"
+           width="1400" height="600" alt="" loading="eager" decoding="async">
+    </div>
   </div>
 
   <div class="article-body">

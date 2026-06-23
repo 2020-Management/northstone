@@ -308,6 +308,24 @@ a { color: inherit; text-decoration: none; }
 .motif--feature::after { top: 60%; }
 .motif--wide::after { top: 58%; }
 
+/* Photographic fill — a navy-duotone image inside the motif frame.
+   Sits beneath the brass horizon line (::after) and corner mark so the
+   framing language of the CSS motifs carries over to real photography. */
+.motif-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+.motif--colonnade:has(.motif-photo) { background: #0a1622; }
+/* Keep the faint vertical-line overlay subtly on top of the photo */
+.motif--colonnade:has(.motif-photo)::before { opacity: 0.5; z-index: 1; }
+.motif:has(.motif-photo)::after { z-index: 2; }
+.motif-photo ~ .motif-corner,
+.motif-photo ~ .motif-glow { z-index: 2; }
+
 /* Modular grid — 4×4 cells, a few filled brass / white-6% */
 .motif--modular {
   aspect-ratio: 4 / 3;
@@ -825,10 +843,13 @@ a.detail-value:hover { color: var(--accent); }
   gap: 22px;
 }
 .field { display: block; }
+/* Vertical rhythm between stacked blocks. The `gap` on .field-row already
+   spaces the two columns within a row, so the margin must NOT apply to the
+   second .field inside a row — scope it to direct children of the form. */
 .field + .field-row,
 .field-row + .field-row,
 .field-row + .field,
-.field + .field { margin-top: 22px; }
+#inquiry-form > .field + .field { margin-top: 22px; }
 .field-label {
   display: block;
   font-family: var(--sans);
@@ -989,8 +1010,17 @@ a.detail-value:hover { color: var(--accent); }
 .insights-grid .card-grid { gap: 40px 32px; }
 .insights-grid .card-title { font-size: 22px; }
 .insights-grid .card-summary { line-height: 1.56; }
-/* Cards hidden by an active filter */
-.card.is-hidden { display: none; }
+/* Items hidden by an active filter (grid cards and the featured block) */
+.card.is-hidden,
+.featured.is-hidden { display: none; }
+
+/* Empty state shown when a filter matches no perspectives */
+.insights-empty {
+  margin: 0;
+  padding: 8px 0;
+  font-size: 16px;
+  color: var(--ink-soft);
+}
 
 
 /* ====== 18. Article ====== */

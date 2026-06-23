@@ -21,6 +21,11 @@ nav: home
         </div>
       </div>
       <div class="motif motif--colonnade" aria-hidden="true">
+        <img class="motif-photo"
+             src="{{ '/assets/img/hero.webp' | relative_url }}"
+             srcset="{{ '/assets/img/hero.webp' | relative_url }} 900w, {{ '/assets/img/hero@2x.webp' | relative_url }} 1800w"
+             sizes="(max-width: 900px) 100vw, 360px"
+             width="900" height="1200" alt="" loading="eager" decoding="async">
         <span class="motif-corner"></span>
         <span class="motif-glow"></span>
       </div>
