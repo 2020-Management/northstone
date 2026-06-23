@@ -5,7 +5,8 @@ permalink: /insights/
 nav: insights
 ---
 
-{% assign posts = site.insights | sort: "date" | reverse %}
+{% assign all_insights = site.insights | default: empty %}
+{% assign posts = all_insights | sort: "date" | reverse %}
 {% assign featured = posts | where: "featured", true | first %}
 {% unless featured %}{% assign featured = posts | first %}{% endunless %}
 

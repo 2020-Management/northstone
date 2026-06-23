@@ -190,7 +190,7 @@ nav: home
       <div>
         <div class="zazoon-kicker">Inaugural investment · Modular GRC platform</div>
         <h3 class="zazoon-name">Zazoon</h3>
-        <p class="zazoon-desc">MyGRC is a modular platform that lets organisations run compliance, risk and internal controls in one place — adopted one module at a time, or as a single integrated suite.</p>
+        <p class="zazoon-desc">MyGRC is a modular platform that lets organisations run governance, risk and compliance in one place — adopted one module at a time, or as a single integrated suite.</p>
         <div class="chip-row">
           <span class="chip">Internal Control System</span>
           <span class="chip">Risk Management</span>
@@ -301,7 +301,8 @@ nav: home
     </div>
     <p class="insights-mandate">Our standing view on where governance, risk and compliance software is heading — and why the demand behind it does not fade.</p>
     <div class="card-grid">
-      {% assign latest = site.insights | sort: "date" | reverse | slice: 0, 3 %}
+      {% assign all_insights = site.insights | default: empty %}
+      {% assign latest = all_insights | sort: "date" | reverse | slice: 0, 3 %}
       {% for post in latest %}
       <a href="{{ post.url | relative_url }}" class="card">
         <div class="meta-row">
@@ -319,27 +320,19 @@ nav: home
 <!-- ====== In the news ====== -->
 <section class="section section--light" id="news">
   <div class="container reveal">
-    <div class="eyebrow">
-      <span class="eyebrow-num">07</span>
-      <span class="eyebrow-label">In the news</span>
+    <div class="insights-head">
+      <div class="eyebrow">
+        <span class="eyebrow-num">07</span>
+        <span class="eyebrow-label">In the news</span>
+      </div>
+      <a href="{{ '/news/' | relative_url }}" class="link-accent">All coverage →</a>
     </div>
-    <p class="news-note">Illustrative coverage shown for design purposes. Real press will be linked here as it is published.</p>
     <div class="news-list">
-      <a href="#" class="news-row">
-        <div class="news-source">Reuters · April 2026</div>
-        <div class="news-headline">Zurich's Northstone Invest targets Europe's compliance-software market for debut fund</div>
-        <div class="news-arrow">→</div>
-      </a>
-      <a href="#" class="news-row">
-        <div class="news-source">Private Equity International · February 2026</div>
-        <div class="news-headline">Regulation as a moat: why GRC software has become a quiet frontier for buyout capital</div>
-        <div class="news-arrow">→</div>
-      </a>
-      <a href="#" class="news-row">
-        <div class="news-source">Finews · January 2026</div>
-        <div class="news-headline">Northstone names Zazoon, maker of the MyGRC platform, as its inaugural investment</div>
-        <div class="news-arrow">→</div>
-      </a>
+      {% assign all_news = site.news | default: empty %}
+      {% assign recent_news = all_news | sort: "date" | reverse | slice: 0, 3 %}
+      {% for item in recent_news %}
+        {% include news-row.html item=item %}
+      {% endfor %}
     </div>
   </div>
 </section>

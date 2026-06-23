@@ -953,6 +953,10 @@ a.detail-value:hover { color: var(--accent); }
   letter-spacing: -0.015em;
   color: var(--ink);
 }
+/* When the page head has no filter row (e.g. the news index), the mandate
+   line follows the H1 directly — neutralise its negative top margin so it
+   does not overlap the heading. */
+.insights-h1 + .insights-mandate { margin-top: 20px; }
 .filter-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 40px; }
 .chip-filter {
   font-family: var(--sans);
@@ -1204,15 +1208,6 @@ a.detail-value:hover { color: var(--accent); }
   font-size: 16px;
   line-height: 1.62;
   color: var(--ink-soft);
-}
-
-/* In-the-news illustrative caveat */
-.news-note {
-  margin: -28px 0 28px;
-  font-family: var(--sans);
-  font-size: 12px;
-  line-height: 1.6;
-  color: var(--fine-print);
 }
 
 /* Disclosures strip — quiet hairline-bounded band above the footer */

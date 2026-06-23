@@ -27,11 +27,15 @@ plugins:
   - jekyll-sitemap
 
 # Insights articles live in the _insights collection and are served at
-# /insights/<slug>/.
+# /insights/<slug>/. News items live in the _news collection; they are not
+# rendered as standalone pages (output: false) — each item links either to
+# external press coverage (external_url) or to the /news/ index.
 collections:
   insights:
     output: true
     permalink: /insights/:name/
+  news:
+    output: false
 
 exclude:
   - README.md
