@@ -1,26 +1,35 @@
 ---
-title: "Inside Zazoon: building the modular GRC platform."
+title: "Inside Zazoon: why a single obligation becomes a platform."
 category: Portfolio
 date: 2026-02-01
-read_time: "5 min read"
-standfirst: "How a modular architecture turns a single compliance need into an expanding, durable platform."
-summary: "How a modular architecture turns a single compliance need into an expanding, durable platform."
+read_time: "8 min read"
+standfirst: "Regulatory obligations arrive in sequence, never as a suite. We backed MyGRC because its modular architecture is built in the same shape."
+summary: "Why Northstone made Zazoon its inaugural investment: a shared-model modular platform absorbs obligations the way they actually accrue — one regime at a time."
 ---
 
-When we made Zazoon our inaugural investment, the thing that convinced us was not a single feature. It was the architecture. MyGRC is built so that an organisation can adopt one module to solve one obligation, then add the next as its needs grow — without ripping anything out. That is rare, and it is the foundation of a durable platform.
+Northstone made Zazoon its inaugural investment for a reason that has less to do with any single feature than with shape. MyGRC is a governance, risk and compliance platform whose modules — an Internal Control System, Risk Management, and Data Protection — can each be bought and run on their own, yet sit on one shared data model. We did not back that design because modular software is in fashion. We backed it because it matches how regulatory obligations actually reach an organisation: not as a single procurement event, but one at a time, years apart, each on its own clock and rarely coordinated with the last.
 
-## One need, then the next
+That asynchrony is the whole problem. A finance director does not wake one morning needing a full compliance suite. They inherit a control environment an auditor wants formalised, and they solve that. Later a data-protection duty under the GDPR sharpens, and they solve that too — usually with a different tool, bought by a different person, under a different budget. Then a new regime lands. For a regulated financial entity, that is the Digital Operational Resilience Act, which has applied since 17 January 2025, and it brings demands the first two tools were never built to carry. By the third obligation, the organisation runs three systems that do not speak to each other.
 
-Most organisations do not arrive ready to buy a full GRC suite. They arrive with a specific, pressing problem: an internal control framework to formalise, a risk register to maintain, a data-protection obligation to evidence. MyGRC meets each of those on its own — and because the modules share a common data model, the second purchase is easier than the first, and the third easier still.
+## How obligations actually accrue
 
-> Land with the obligation in front of the customer. Expand as the obligations accumulate.
+Take the sequence in order, because the order is the point. An Internal Control System is, at root, a structured inventory of controls mapped to the risks they mitigate and the evidence that they work. Stand one up and you have the substrate every later obligation will draw on: a register of what the organisation does, who owns it, and how it is tested.
 
-## Why modularity compounds
+Layer the GDPR on top. A data-protection programme is not a separate universe of work; it is the same controls, owners and evidence viewed through the lens of personal data. Records of processing, impact assessments and breach procedures are control activities that happen to concern privacy. Held in a second, unconnected tool, each control common to both is entered twice, tested twice, and falls out of step the moment one copy changes.
 
-A modular platform aligns the way software is sold with the way obligations actually arrive — one at a time, over years. Each module is a complete product; together they are a system of record that gets more valuable with every capability added.
+Then DORA arrives. Regulation (EU) 2022/2554 is binding in its entirety and directly applicable across the Union, with no national transposition to soften or delay it. It requires in-scope financial entities to maintain a register of information covering every contractual arrangement for ICT services from third-party providers. It also forces major ICT-related incidents onto a punishing schedule — though the precise clocks sit not in the base regulation but in its technical standards, the RTS adopted as Commission Delegated Regulation (EU) 2025/301. Under Article 5 of those standards, an in-scope entity must file an initial notification within four hours of an incident being classified as major, an intermediate report within seventy-two hours of that notification, and a final report within a month of that report. None of this is fresh work. The third-party register is the control inventory again, resolved to vendors; the incident workflow is the risk function again, now against a regulatory clock. A firm that already holds its controls and risks in one place meets DORA by extending what it has. A firm that does not buys a fourth tool.
 
-- Internal Control System, Risk Management and Data Protection, usable separately or together.
-- A shared model so data entered once serves every module.
-- A natural expansion path that turns a single sale into a long relationship.
+> Obligations do not arrive as a suite to be procured; they arrive in sequence, and only an architecture built in the same shape absorbs them without being rebuilt each time.
 
-The plan from here is straightforward to describe and demanding to execute: deepen the platform, expand across regulated verticals and geographies, and pursue complementary acquisitions that fit the same model. Done well, Zazoon becomes the standard its category is missing.
+## Why modularity is the right answer
+
+Here the shared data model earns its place. Because MyGRC's modules read and write the same records, a control captured for the Internal Control System is present when Data Protection needs it, and present again when a DORA third-party register demands it. The data is entered once and reused, not copied and reconciled. That is the difference between a platform and a folder of products that share a logo.
+
+The commercial consequence follows from the architecture, not from any sales motion layered on top:
+
+- The first module is sold against an obligation the buyer already feels, so the sale is short.
+- Each later module inherits the data and trust the last one established, so it is cheaper to win and harder to displace.
+- Every obligation a customer adds raises the cost of leaving, because the evidence for all of them now lives in one place.
+- The same model serves a control framework, a privacy duty and a resilience regime, so the surface widens as regimes layer rather than fragmenting.
+
+We are candid about what this asks of the company. A modular platform is harder to build than a monolith, because the shared model must be right before the second module is worth anything. Zazoon built that substrate first — the rare and unglamorous thing that convinced us. From here the plan is to deepen each module, extend across the verticals where obligations stack most densely, and acquire only what fits the same model. Done well, Zazoon becomes less a vendor than the place an organisation keeps the proof it is in control.

@@ -8,7 +8,7 @@ standfirst: "Since 17 January 2025, a European financial entity must not merely 
 summary: "DORA turned operational resilience from documented policy into a supervised, evidenced obligation for the financial sector — and the evidence has to be produced on a regulator's clock, not the firm's."
 ---
 
-For most of the post-crisis period, operational resilience in European finance lived in policy documents. A firm wrote down how it managed technology risk, reviewed the document annually, and was rarely asked to demonstrate that the described controls actually held. The Digital Operational Resilience Act ends that arrangement. Since 17 January 2025, the date from which Regulation (EU) 2022/2554 applies, resilience is not a stated intention a financial entity holds about itself. It is an obligation a supervisor can test, on timetables the firm does not set.
+For most of the post-crisis period, operational resilience in European finance lived in policy documents. A firm wrote down how it managed technology risk, reviewed the document annually, and was rarely asked to demonstrate that the described controls held. The Digital Operational Resilience Act ends that arrangement. Since 17 January 2025, the date from which Regulation (EU) 2022/2554 applies, resilience is not a stated intention a financial entity holds about itself. It is an obligation a supervisor can test, on timetables the firm does not set.
 
 This is why we treat DORA as a category-forming event rather than another compliance burden. A regime that asks for a policy is satisfied by a well-drafted document. A regime that asks for evidence, produced to a deadline and reconcilable against a register, requires a system that captures the activity as it happens and can reproduce it later in the form a regulator expects.
 
@@ -30,7 +30,7 @@ Consider incident reporting, the pillar where intent and evidence diverge most s
 
 > No firm assembles a four-hour regulatory filing from a folder of policy PDFs; the clock is short precisely because the regulator assumes the evidence already exists in a system.
 
-Whether an incident is even classified as major is itself a structured determination, made against the seven criteria set out in the classification standard, Commission Delegated Regulation (EU) 2024/1772, combining the criticality of affected services with data-loss and other materiality thresholds. A firm that cannot continuously evaluate live incidents against those criteria will miss the four-hour window not through negligence but through architecture. The deadline is, in effect, a software requirement disguised as a reporting rule.
+Whether an incident is even classified as major is itself a structured determination, made against the seven criteria set out in the classification standard, Commission Delegated Regulation (EU) 2024/1772, combining the criticality of affected services with data-loss and other materiality thresholds. A firm that cannot continuously evaluate live incidents against those criteria will miss the four-hour window not through negligence but architecture. The deadline is, in effect, a software requirement disguised as a reporting rule.
 
 ## Third parties, tested defences, and a supervised perimeter
 
