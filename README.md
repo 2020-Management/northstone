@@ -1,6 +1,6 @@
 # Northstone Invest — marketing site
 
-Static marketing site for Northstone Invest, a (fictional) Zurich-based private
+Static marketing site for Northstone Invest, a Zurich-based private
 equity firm investing in GRC software companies. Built with **Jekyll** and
 deployed to **GitHub Pages**. Plain HTML, CSS and a little vanilla JS — no build
 step beyond Jekyll, no framework.
@@ -19,18 +19,19 @@ step beyond Jekyll, no framework.
 ## Structure
 
 ```
-_config.yml            Site config + the `insights` collection
+_config.yml            Site config + the `insights` and `news` collections
 _layouts/
   default.html         Page shell (head, header, content, footer)
   article.html         Insights article wrapper
 _includes/
-  head.html  header.html  footer.html  structured-data.html
-_insights/             One Markdown file per article (the collection)
+  head.html  header.html  footer.html  structured-data.html  news-row.html
+_insights/             One Markdown file per article (the insights collection)
+_news/                 One Markdown file per press item (the news collection)
 index.html             Homepage
 contact.html           Investor-relations page + inquiry form  → /contact/
 insights.html          Insights index (featured + filterable grid) → /insights/
+news.html              News index (press coverage + announcements) → /news/
 assets/                css / js / fonts / img
-DESIGN-HANDOFF.md      Original design spec & tokens (excluded from the build)
 ```
 
 ## Local development
@@ -79,10 +80,10 @@ Before going live, set `url` (and `baseurl` if served from a subpath) in
 
 ## Contact form
 
-The form validates client-side and shows a thank-you state. GitHub Pages is
-static, so it does not submit anywhere yet — wire it to a hosted form handler
-(Formspree, Web3Forms, a serverless function) at the marked hook in
-`assets/js/main.js` and set the form's `action`.
+The form validates client-side and shows a thank-you state. Because GitHub
+Pages is static, submissions are handled by an external endpoint: connect a
+hosted form handler (Formspree, Web3Forms, a serverless function) at the
+marked hook in `assets/js/main.js` and set the form's `action`.
 
 ## Imagery
 

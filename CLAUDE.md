@@ -6,7 +6,7 @@ A `README.md` exists at the repo root and is the canonical reference for stack, 
 
 ## What this is
 
-Static marketing site for Northstone Invest, a (fictional) Zurich PE firm investing in GRC software. Jekyll + GitHub Pages. Plain HTML/CSS/vanilla JS — no framework, no build step beyond Jekyll.
+Static marketing site for Northstone Invest, a Zurich PE firm investing in GRC software. Jekyll + GitHub Pages. Plain HTML/CSS/vanilla JS — no framework, no build step beyond Jekyll.
 
 ## Commands
 
@@ -39,4 +39,3 @@ There is no test suite beyond htmlproofer. CI (`.github/workflows/jekyll.yml`) r
 
 - Match the existing voice/tone in copy — restrained, institutional PE register.
 - The contact form is static-only; it shows a thank-you state but submits nowhere. The wiring hook is marked in `assets/js/main.js`.
-- `DESIGN-HANDOFF.md` holds the original design spec and is excluded from the build.

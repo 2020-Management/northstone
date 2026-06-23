@@ -39,7 +39,7 @@ collections:
 
 exclude:
   - README.md
-  - DESIGN-HANDOFF.md
+  - CLAUDE.md
   - Gemfile
   - Gemfile.lock
   - vendor
