@@ -1,29 +1,41 @@
 ---
-title: "DORA is live. What operational resilience now demands of software."
+title: "DORA made resilience an evidenced obligation. That is a category."
 category: Regulation
 date: 2026-03-01
-read_time: "6 min read"
+read_time: "8 min read"
 featured: true
-standfirst: "The Digital Operational Resilience Act has reset the baseline for financial-sector technology — and created a durable software category in its wake."
-summary: "The regulation has reset the baseline for financial-sector technology — and created a durable software category in its wake."
+standfirst: "Since 17 January 2025, a European financial entity must not merely intend to be resilient. It must be able to prove it, on a supervisor's clock."
+summary: "DORA turned operational resilience from documented policy into a supervised, evidenced obligation for the financial sector — and the evidence has to be produced on a regulator's clock, not the firm's."
 ---
 
-For two decades, operational resilience in financial services was a matter of policy: documented intentions, periodic reviews and a degree of trust that the underlying systems would hold. DORA ends that. As of its application date, resilience is a measurable, supervised obligation — and the difference between intent and evidence has become the difference between compliance and exposure.
+For most of the post-crisis period, operational resilience in European finance lived in policy documents. A firm wrote down how it managed technology risk, reviewed the document annually, and was rarely asked to demonstrate that the described controls actually held. The Digital Operational Resilience Act ends that arrangement. Since 17 January 2025, the date from which Regulation (EU) 2022/2554 applies, resilience is not a stated intention a financial entity holds about itself. It is an obligation a supervisor can test, on timetables the firm does not set.
 
-That shift is precisely the kind of structural change we invest behind. When a regulator moves an activity from discretionary to mandatory, it does more than create work — it creates a category. The organisations now responsible for ICT risk, incident reporting and third-party oversight cannot meet the standard with spreadsheets and goodwill. They need systems of record.
+This is why we treat DORA as a category-forming event rather than another compliance burden. A regime that asks for a policy is satisfied by a well-drafted document. A regime that asks for evidence, produced to a deadline and reconcilable against a register, requires a system that captures the activity as it happens and can reproduce it later in the form a regulator expects.
 
-## From policy to evidence
+## What DORA actually requires
 
-DORA's demands are concrete: maintain a register of ICT third parties, classify and report major incidents within tight windows, test resilience regularly and demonstrate board-level oversight of all of it. Each requirement implies a workflow, an audit trail and a source of truth — and each is far easier to satisfy in dedicated software than in a patchwork of documents.
+DORA is a Regulation, not a Directive. It binds in its entirety and applies directly across every Member State, without the national transposition that staggers and dilutes a directive such as NIS2. There is no patchwork of local implementing laws to wait for. The obligation arrived everywhere at once, in identical terms, structured around five pillars that each demand something a spreadsheet handles badly.
 
-> When a regulator turns intent into evidence, software is no longer a convenience. It is the only practical way to comply at scale.
+- ICT risk management, with the management body bearing ultimate, named responsibility under Article 5 for the framework it must define, approve and oversee.
+- ICT-related incident management, classification and reporting against defined materiality thresholds.
+- Digital operational resilience testing, including threat-led penetration testing for significant entities.
+- ICT third-party risk management, including a maintained register of information on every contractual arrangement for ICT services.
+- Information and intelligence sharing on cyber threats.
 
-## Why this is a durable category
+Read together, these are not five documents. They are five live processes, each generating an audit trail a supervisor is entitled to inspect. That is the structural fact that creates durable software demand.
 
-Regulation rarely retreats. Once an obligation is in force, the software that satisfies it becomes embedded in how the organisation operates — renewed not because a buyer is delighted, but because removing it would re-create the risk. That is the foundation of the retention and pricing power we look for.
+## The clocks are the point
 
-- Mandated demand that does not soften in a downturn.
-- High switching costs once a system of record is in place.
-- A widening surface of obligation as new regimes layer on top.
+Consider incident reporting, the pillar where intent and evidence diverge most sharply. Under the reporting standard, Commission Delegated Regulation (EU) 2025/301, a financial entity that classifies an incident as major must file an initial notification within four hours of that classification, and in any case no later than twenty-four hours from becoming aware of the incident. An intermediate report follows within seventy-two hours of that initial notification, and a final report, with root-cause analysis, no later than one month after the intermediate report.
 
-DORA is one regime among several — NIS2, the EU AI Act and evolving SEC cyber rules point the same direction. For the companies building the tooling to meet them, the addressable need only compounds. That is where Northstone invests.
+> No firm assembles a four-hour regulatory filing from a folder of policy PDFs; the clock is short precisely because the regulator assumes the evidence already exists in a system.
+
+Whether an incident is even classified as major is itself a structured determination, made against the seven criteria set out in the classification standard, Commission Delegated Regulation (EU) 2024/1772, combining the criticality of affected services with data-loss and other materiality thresholds. A firm that cannot continuously evaluate live incidents against those criteria will miss the four-hour window not through negligence but through architecture. The deadline is, in effect, a software requirement disguised as a reporting rule.
+
+## Third parties, tested defences, and a supervised perimeter
+
+The same logic runs through the other pillars. The register of information required under Article 28 is not a contracts list; it is submitted to competent authorities annually and on request, at entity, sub-consolidated and consolidated levels, and it must reconcile. Its quality has already become consequential: when the European Supervisory Authorities designated the first batch of critical ICT third-party providers in November 2025, that list was drawn directly from the registers financial entities had filed. A weak register is now a supervised exposure, not an internal housekeeping matter.
+
+Testing tightens the perimeter further. Entities identified by their competent authority as significant must conduct advanced testing by means of threat-led penetration testing at least every three years, built on the European Central Bank's TIBER-EU framework under Article 26. This is not a questionnaire. It is adversarial assessment whose scope, findings and remediation must be governed and evidenced over multi-year cycles. Above it all sits the EU Oversight Framework, under which designated critical providers answer to a Lead Overseer with powers of inspection.
+
+The investment conclusion follows from these specifics. DORA has fixed, across an entire continent's financial sector, a set of processes that must run continuously, reconcile against each other, and surface evidence to a supervisor on demand and on deadline. That is an unusually precise specification for a software market: the buyer is identifiable, the obligation uniform, and the standard of proof set by a regulator rather than negotiated with a customer. We invest behind the firms building to that specification, because the demand they serve is written into binding European law and enforced by people with the power to inspect.

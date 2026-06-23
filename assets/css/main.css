@@ -1130,6 +1130,83 @@ a.detail-value:hover { color: var(--accent); }
 }
 
 
+/* ====== 19b. Credibility additions ======
+   Hero "as of" stamp, the Approach method panel, the Insights/News intro
+   notes, the disclosures strip and the footer refrain. All reuse the
+   existing token palette — navy/ivory/brass, hairlines, no shadows. */
+
+/* Hero meta-strip "as of" caption */
+.meta-strip-asof {
+  margin-top: 18px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--on-dark-soft);
+}
+
+/* Approach — "How we work" method panel (sits below the A–D pillars) */
+.method { margin-top: 72px; }
+.method-head {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: baseline;
+  margin-bottom: 8px;
+}
+.method-intro {
+  font-size: 18px;
+  line-height: 1.66;
+  color: var(--ink-soft);
+}
+.method-steps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 56px;
+}
+/* The shared .point top border is the hairline rhythm; in a 2-col grid the
+   first two cells form the top row. */
+.method-steps .point:nth-last-child(-n+2) { border-bottom: 1px solid var(--line); }
+
+/* Insights program mandate line */
+.insights-mandate {
+  max-width: 60ch;
+  margin: -26px 0 40px;
+  font-size: 16px;
+  line-height: 1.62;
+  color: var(--ink-soft);
+}
+
+/* In-the-news illustrative caveat */
+.news-note {
+  margin: -28px 0 28px;
+  font-family: var(--sans);
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--fine-print);
+}
+
+/* Disclosures strip — quiet hairline-bounded band above the footer */
+.disclosure-strip {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.disclosure-text {
+  max-width: 96ch;
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+
+/* Footer specialist refrain — serif, sits above the legal paragraph */
+.site-footer-refrain {
+  margin-top: 36px;
+  font-family: var(--serif);
+  font-size: 18px;
+  color: var(--ink);
+}
+.site-footer-refrain + .site-footer-legal { margin-top: 14px; }
+
+
 /* ====== 20. Responsive ====== */
 
 @media (max-width: 900px) {
@@ -1159,10 +1236,17 @@ a.detail-value:hover { color: var(--accent); }
   .zazoon,
   .faq-grid,
   .contact-page-grid,
-  .featured-link {
+  .featured-link,
+  .method-head {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
+  /* Method steps stack; restore the single-column hairline rhythm */
+  .method-steps { grid-template-columns: 1fr; column-gap: 0; }
+  .method-steps .point:nth-last-child(-n+2):not(:last-child) { border-bottom: none; }
+  .method { margin-top: 56px; }
+  .method-head { margin-bottom: 0; }
 
   .meta-strip { grid-template-columns: repeat(2, 1fr); }
   .meta-cell:nth-child(2) { padding-right: 0; border-right: none; }
