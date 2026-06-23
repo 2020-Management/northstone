@@ -1,0 +1,22 @@
+<header class="site-header">
+  <div class="container site-header-inner">
+    <a href="{{ '/' | relative_url }}" class="brand" aria-label="Northstone Invest — home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-word">Northstone</span>
+      <span class="brand-tag">Invest</span>
+    </a>
+
+    <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      <a href="{{ '/#thesis' | relative_url }}">Thesis</a>
+      <a href="{{ '/#approach' | relative_url }}">Approach</a>
+      <a href="{{ '/#portfolio' | relative_url }}">Portfolio</a>
+      <a href="{{ '/insights/' | relative_url }}"{% if page.nav == 'insights' %} class="is-current" aria-current="page"{% endif %}>Insights</a>
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn--dark">Investor relations</a>
+    </nav>
+  </div>
+</header>

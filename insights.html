@@ -1,0 +1,60 @@
+---
+title: "Insights"
+description: "Perspectives on governance, risk and the software that runs it — from Northstone Research."
+permalink: /insights/
+nav: insights
+---
+
+{% assign posts = site.insights | sort: "date" | reverse %}
+{% assign featured = posts | where: "featured", true | first %}
+{% unless featured %}{% assign featured = posts | first %}{% endunless %}
+
+<!-- Page head -->
+<section class="container insights-page-head">
+  <div class="eyebrow eyebrow--rule">
+    <span class="eyebrow-rule"></span>
+    <span class="eyebrow-label" style="color: var(--accent);">Insights</span>
+  </div>
+  <h1 class="insights-h1">Perspectives on governance, risk and the software that runs it.</h1>
+  <div class="filter-row">
+    <button class="chip-filter is-active" data-filter="all">All</button>
+    <button class="chip-filter" data-filter="Regulation">Regulation</button>
+    <button class="chip-filter" data-filter="Markets">Markets</button>
+    <button class="chip-filter" data-filter="Perspective">Perspective</button>
+    <button class="chip-filter" data-filter="Portfolio">Portfolio</button>
+  </div>
+</section>
+
+<!-- Featured -->
+<section class="container featured">
+  <a href="{{ featured.url | relative_url }}" class="featured-link">
+    <div class="motif motif--feature" aria-hidden="true"></div>
+    <div>
+      <div class="meta-row">
+        <span>{{ featured.category }}</span>
+        <span class="meta-date">{{ featured.date | date: "%b %Y" }} · Featured</span>
+      </div>
+      <h2 class="featured-title">{{ featured.title }}</h2>
+      <p class="featured-summary">{{ featured.summary }}</p>
+      <span class="featured-cta">Read the article →</span>
+    </div>
+  </a>
+</section>
+
+<!-- Grid (all but the featured article) -->
+<section class="container insights-grid">
+  <div class="card-grid">
+    {% for post in posts %}
+    {% unless post.url == featured.url %}
+    <a href="{{ post.url | relative_url }}" class="card" data-category="{{ post.category }}">
+      <div class="meta-row">
+        <span>{{ post.category }}</span>
+        <span class="meta-date">{{ post.date | date: "%b %Y" }}</span>
+      </div>
+      <h3 class="card-title">{{ post.title }}</h3>
+      <p class="card-summary">{{ post.summary }}</p>
+    </a>
+    {% endunless %}
+    {% endfor %}
+  </div>
+</section>

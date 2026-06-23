@@ -1,0 +1,87 @@
+---
+title: "Request the fund materials"
+description: "Fund I is open to qualified institutional, family-office and private investors. Request the materials and an introductory call with Northstone Invest."
+permalink: /contact/
+nav: contact
+---
+
+<section class="container contact-page">
+  <div class="contact-page-grid">
+
+    <!-- Copy + details -->
+    <div>
+      <div class="eyebrow eyebrow--rule">
+        <span class="eyebrow-rule"></span>
+        <span class="eyebrow-label" style="color: var(--accent);">Investor relations</span>
+      </div>
+      <h1 class="contact-h1">Request the fund materials.</h1>
+      <p class="contact-intro">Fund I is open to qualified institutional, family-office and private investors. Share a few details and we'll send the materials and arrange an introductory call.</p>
+
+      <div class="detail-list">
+        <div class="detail">
+          <div class="detail-label">Office</div>
+          <div class="detail-value">Bahnhofstrasse, 8001 Zurich, Switzerland</div>
+        </div>
+        <div class="detail">
+          <div class="detail-label">Investors</div>
+          <a href="mailto:investors@northstone.invest" class="detail-value">investors@northstone.invest</a>
+        </div>
+        <div class="detail">
+          <div class="detail-label">Founders</div>
+          <a href="mailto:founders@northstone.invest" class="detail-value">founders@northstone.invest</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Form / thank-you -->
+    <div class="form-card">
+      <form id="inquiry-form" action="#" method="post">
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Full name</span>
+            <input type="text" name="name" required placeholder="Jane Vogel">
+          </label>
+          <label class="field">
+            <span class="field-label">Work email</span>
+            <input type="email" name="email" required placeholder="jane@firm.com">
+          </label>
+        </div>
+        <div class="field-row">
+          <label class="field">
+            <span class="field-label">Organisation</span>
+            <input type="text" name="organisation" placeholder="Firm or family office">
+          </label>
+          <label class="field">
+            <span class="field-label">Investor type</span>
+            <select name="investor_type" required>
+              <option value="">Select…</option>
+              <option>Institutional</option>
+              <option>Family office</option>
+              <option>Private / high-net-worth</option>
+              <option>Adviser / intermediary</option>
+              <option>Other</option>
+            </select>
+          </label>
+        </div>
+        <label class="field">
+          <span class="field-label">Country / jurisdiction</span>
+          <input type="text" name="country" placeholder="Switzerland">
+        </label>
+        <label class="field">
+          <span class="field-label">Anything we should know? <span class="optional">(optional)</span></span>
+          <textarea name="message" rows="4" placeholder="Mandate, ticket size, timing…"></textarea>
+        </label>
+        <button type="submit" class="btn btn--accent form-submit">Request fund materials →</button>
+        <p class="form-fineprint">By submitting you agree to be contacted by Northstone Invest. This form is a design prototype and does not transmit data.</p>
+      </form>
+
+      <div class="form-thanks" id="inquiry-thanks" hidden>
+        <span class="thanks-check" aria-hidden="true">✓</span>
+        <h2>Thank you — request received.</h2>
+        <p>A member of the Northstone team will be in touch shortly to share the fund materials and arrange a call.</p>
+        <a href="{{ '/' | relative_url }}">← Back to home</a>
+      </div>
+    </div>
+
+  </div>
+</section>

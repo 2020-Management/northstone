@@ -1,0 +1,103 @@
+/* ============================================================
+   Design tokens
+   ------------------------------------------------------------
+   Centralised custom properties. Change values here, not in
+   component styles. Keeps the visual system consistent.
+   ============================================================ */
+
+
+/* ====== Self-hosted fonts ======
+   Files in /assets/fonts/, no third-party requests. Spectral ships
+   one .woff2 per weight (plus an italic). Libre Franklin is a single
+   variable file covering the full 100–900 weight axis. */
+
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Spectral-400.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/Spectral-500.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/Spectral-600.woff2") format("woff2");
+}
+@font-face {
+  font-family: "Spectral";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/Spectral-400-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("../fonts/LibreFranklin-Variable.woff2") format("woff2");
+}
+
+
+:root {
+  /* Colour — surfaces */
+  --bg:            #f4f1ea;  /* warm ivory — default page background */
+  --bg-alt:        #ffffff;  /* white — alternating sections, cards, header, footer */
+  --dark:          #0e1b2c;  /* navy — dark hero / portfolio / contact backgrounds */
+
+  /* Colour — ink (text on light) */
+  --ink:           #11213a;  /* deep navy — primary text, dark buttons */
+  --ink-soft:      #4a5a72;  /* muted navy — body copy, labels */
+  --ink-body:      #28344a;  /* article body copy (slightly darker than ink-soft) */
+
+  /* Colour — text on dark */
+  --on-dark:       #eef1f6;  /* near-white */
+  --on-dark-soft:  #9fb0c8;  /* muted blue-grey — secondary text on dark */
+
+  /* Colour — accent (single brass hue family; do not introduce others) */
+  --accent:          #b0894e;  /* brass — accent on light, primary CTA fill */
+  --accent-on-dark:  #cda868;  /* lighter brass — accent on dark */
+
+  /* Colour — hairlines */
+  --line:        rgba(17, 33, 58, 0.14);    /* dividers / borders on light */
+  --line-strong: rgba(17, 33, 58, 0.22);    /* input borders on light */
+  --line-dark:   rgba(255, 255, 255, 0.14); /* dividers / borders on dark */
+  --line-dark-strong: rgba(255, 255, 255, 0.28);
+
+  /* Colour — form */
+  --placeholder: #97a2b3;
+  --fine-print:  #8090a4;
+
+  /* Typography */
+  --serif: "Spectral", Georgia, "Times New Roman", serif;
+  --sans:  "Libre Franklin", Helvetica, Arial, sans-serif;
+  --mono:  ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* Layout */
+  --content-max: 1240px;
+  --gutter:      48px;
+  --radius:      2px;    /* deliberately sharp on buttons / inputs / cards */
+  --radius-pill: 999px;  /* chips / pills only */
+  --section-pad: 120px;  /* top-level section vertical rhythm */
+
+  /* Motion — colour/opacity only, kept short */
+  --t-fast: 150ms;
+  --ease:   cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+@media (max-width: 900px) {
+  :root {
+    --gutter:      24px;
+    --section-pad: 80px;
+  }
+}

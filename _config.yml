@@ -1,0 +1,50 @@
+title: Northstone Invest
+description: >-
+  Northstone Invest is a Zurich-based private equity firm backing the
+  governance, risk and compliance (GRC) software companies that build the
+  controls, risk and compliance infrastructure regulated industries depend on.
+
+# Origin used for canonical URLs, og:url and sitemap entries.
+# When moving to a custom domain, change this to the new origin and
+# add the domain to a CNAME file at the repo root.
+url: https://example.github.io
+baseurl: ""
+
+author: Northstone Research
+lang: en
+
+# No theme — all styles live in assets/css. Prevents the bundled minima
+# theme from emitting an unused assets/css/style.css into the build.
+theme: null
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Insights articles live in the _insights collection and are served at
+# /insights/<slug>/.
+collections:
+  insights:
+    output: true
+    permalink: /insights/:name/
+
+exclude:
+  - README.md
+  - DESIGN-HANDOFF.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+
+# Apply the default layout and a sensible category fallback everywhere so
+# individual pages only declare what differs (title, description, etc.).
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: insights
+    values:
+      layout: article

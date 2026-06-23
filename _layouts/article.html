@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<article class="article">
+  <div class="article-head">
+    <a href="{{ '/insights/' | relative_url }}" class="article-back">← Insights</a>
+    <div class="meta-row article-meta">
+      <span class="meta-category">{{ page.category }}</span>
+      <span class="meta-date">{{ page.date | date: "%B %Y" }}</span>
+      <span class="meta-date">{{ page.read_time }}</span>
+    </div>
+    <h1 class="article-title">{{ page.title }}</h1>
+    <p class="article-standfirst">{{ page.standfirst }}</p>
+    <div class="article-byline">
+      <span class="avatar" aria-hidden="true">N</span>
+      <div>
+        <div class="article-byline-name">{{ page.author | default: site.author }}</div>
+        <div class="article-byline-place">{{ page.author_location | default: "Zurich" }}</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-lead">
+    <div class="motif motif--colonnade motif--wide" aria-hidden="true"></div>
+  </div>
+
+  <div class="article-body">
+    {{ content }}
+  </div>
+
+  <div class="article-cta">
+    <div>
+      <div class="article-cta-title">Investing in the infrastructure of compliance.</div>
+      <div class="article-cta-sub">Fund I is open to qualified investors.</div>
+    </div>
+    <a href="{{ '/contact/' | relative_url }}" class="btn btn--accent">Request fund materials →</a>
+  </div>
+</article>

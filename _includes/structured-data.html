@@ -1,0 +1,18 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Northstone Invest",
+  "url": {{ '/' | absolute_url | jsonify }},
+  "logo": {{ '/assets/img/favicon.svg' | absolute_url | jsonify }},
+  "description": {{ site.description | jsonify }},
+  "email": "investors@northstone.invest",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bahnhofstrasse",
+    "postalCode": "8001",
+    "addressLocality": "Zurich",
+    "addressCountry": "CH"
+  }
+}
+</script>
