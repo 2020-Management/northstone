@@ -39,9 +39,7 @@
   <div class="container">
     <div class="site-footer-top">
       <a href="{{ home_url | relative_url }}" class="brand" aria-label="Northstone Invest — home">
-        <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-word">Northstone</span>
-        <span class="brand-tag">Invest</span>
+        {% include logo-horizontal.svg %}
       </a>
       <nav class="site-footer-nav" aria-label="Footer navigation">
         <a href="{{ home_url | append: '#' | append: anchor_thesis | relative_url }}">{{ f_thesis }}</a>
