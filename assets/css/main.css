@@ -1271,3 +1271,15 @@ a.detail-value:hover { color: var(--accent); }
   .form-card { padding: 32px 24px; }
   .field-row { grid-template-columns: 1fr; gap: 22px; }
 }
+
+@media (max-width: 560px) {
+  /* Meta strip: stack into one column so values stop overflowing the cell */
+  .meta-strip { grid-template-columns: 1fr; }
+  .meta-cell {
+    padding: 20px 0;
+    border-right: none;
+    border-top: 1px solid var(--line-dark);
+  }
+  .meta-cell:first-child { border-top: none; }
+  .meta-strip { border-top: none; }
+}
