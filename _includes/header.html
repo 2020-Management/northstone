@@ -41,9 +41,7 @@
 <header class="site-header">
   <div class="container site-header-inner">
     <a href="{{ home_url | relative_url }}" class="brand" aria-label="Northstone Invest — home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span class="brand-word">Northstone</span>
-      <span class="brand-tag">Invest</span>
+      {% include logo-horizontal.svg %}
     </a>
 
     <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="{{ menu_label }}">

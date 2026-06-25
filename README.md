@@ -127,5 +127,6 @@ pointing at a basename in `assets/img/` (e.g. `image: lead-markets`).
 Sources (Unsplash): hero — Alex Robertson (Plaza de España, Seville);
 regulation/featured — Niklas Weiss (Sultan Qaboos Grand Mosque, Muscat);
 markets — Sebastian Schuster; perspective — Mike Hindle; portfolio — Harrison
-Lin. The Zazoon block and the "to be announced" tiles deliberately keep their
-CSS motifs (the modular grid evokes the MyGRC suite; no fabricated screenshot).
+Lin. The featured-investment block and the "to be announced" tiles deliberately
+keep their CSS motifs (the modular grid evokes a modular software suite; no
+fabricated screenshot).

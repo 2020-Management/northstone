@@ -1,5 +1,8 @@
 ---
 title: "Innenansicht Zazoon: warum aus einer einzelnen Pflicht eine Plattform wird."
+# Temporär ausgeblendet, bis die Zazoon-Beteiligung öffentlich kommuniziert wird.
+# Zum Reaktivieren: published: false entfernen (oder auf true setzen) – hier und in der EN-Version.
+published: false
 category: Portfolio
 date: 2026-02-01
 read_time: "8 Min. Lesezeit"

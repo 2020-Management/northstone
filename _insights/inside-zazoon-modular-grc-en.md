@@ -1,5 +1,8 @@
 ---
 title: "Inside Zazoon: why a single obligation becomes a platform."
+# Temporarily hidden until the Zazoon investment is communicated publicly.
+# To restore: remove published: false (or set it to true) — here and in the DE version.
+published: false
 category: Portfolio
 date: 2026-02-01
 read_time: "8 min read"
