@@ -6,14 +6,13 @@ description: >-
   Beteiligungen.
 
 # Origin used for canonical URLs, og:url and sitemap entries.
-# This is a *project* Pages site served at https://2020-management.github.io/northstone/.
+# The site is served from a custom domain (see the CNAME file at the repo root),
+# so it lives at the root of that domain with no path prefix.
 # `baseurl` is left empty here so `jekyll serve` works at http://localhost:4000/
-# with no flags. The deploy workflow passes the correct --baseurl (/northstone)
-# at build time (see .github/workflows/jekyll.yml), so the published sitemap,
-# robots.txt and canonical tags use the /northstone path regardless.
-# When moving to a custom domain: set `url` to the new origin and add that
-# domain to a CNAME file at the repo root.
-url: https://2020-management.github.io
+# with no flags. On a custom domain GitHub Pages reports an empty base_path,
+# so the deploy workflow's --baseurl is empty too and the published sitemap,
+# robots.txt and canonical tags resolve at the domain root.
+url: https://northstone-invest.ch
 baseurl: ""
 
 author:
