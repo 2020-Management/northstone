@@ -53,18 +53,6 @@
     });
   }
 
-  /* ---- FAQ marker: swap + / − (rotation is handled in CSS) ---- */
-  function initFaq() {
-    var items = document.querySelectorAll(".faq-item");
-    items.forEach(function (item) {
-      var marker = item.querySelector(".faq-marker");
-      if (!marker) return;
-      var sync = function () { marker.textContent = item.open ? "−" : "+"; };
-      sync();
-      item.addEventListener("toggle", sync);
-    });
-  }
-
   /* ---- Insights filter chips ---- */
   function initFilter() {
     var chips = document.querySelectorAll(".chip-filter");
@@ -126,7 +114,6 @@
   function init() {
     initReveal();
     initNav();
-    initFaq();
     initFilter();
     initContactForm();
   }
