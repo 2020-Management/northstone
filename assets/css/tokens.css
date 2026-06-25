@@ -92,6 +92,7 @@
 
   /* Motion — colour/opacity only, kept short */
   --t-fast: 150ms;
+  --t-slow: 800ms;
   --ease:   cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
