@@ -1,5 +1,7 @@
 ---
 title: "DORA hat Resilienz zur nachzuweisenden Pflicht gemacht. Das ist eine Kategorie."
+# Temporär ausgeblendet, ersetzt durch den KI-Beitrag. Zum Reaktivieren: published: false entfernen – hier und in der EN-Version.
+published: false
 category: Regulation
 date: 2026-03-01
 read_time: "8 Min. Lesezeit"

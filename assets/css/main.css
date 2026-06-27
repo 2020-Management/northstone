@@ -36,8 +36,12 @@ button { font: inherit; cursor: pointer; }
 
 html { scroll-behavior: smooth; }
 
-/* Guard against any element forcing horizontal scroll on narrow screens. */
-html, body { overflow-x: hidden; }
+/* Guard against any element forcing horizontal scroll on narrow screens.
+   Use `clip`, not `hidden`: `hidden` makes html/body a scroll container,
+   which silently breaks the sticky header (it sticks to that container,
+   not the viewport, and scrolls away). `clip` contains overflow without
+   creating a scroll container, so position: sticky keeps working. */
+html, body { overflow-x: clip; }
 
 body {
   background: var(--bg);
@@ -343,22 +347,6 @@ a { color: inherit; text-decoration: none; }
 .modular-grid > span.is-brass-light { background: var(--accent-on-dark); }
 .modular-grid > span.is-fill { background: rgba(255, 255, 255, 0.06); }
 
-/* "To be announced" placeholder tiles */
-.placeholder-tile {
-  aspect-ratio: 16 / 10;
-  border: 1px dashed rgba(255, 255, 255, 0.18);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.placeholder-tile span {
-  font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--on-dark-soft);
-}
-
 
 /* ====== 8. Hero ====== */
 
@@ -596,11 +584,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--on-dark);
 }
 .pipeline-head p { font-size: 14px; color: var(--on-dark-soft); }
-.pipeline-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
 
 
 /* ====== 12. Insights teasers & cards ====== */
@@ -1274,7 +1257,6 @@ a.detail-value:hover { color: var(--accent); }
 
   .card-grid,
   .insights-grid .card-grid,
-  .pipeline-grid { grid-template-columns: 1fr; }
 
   .contact-split { grid-template-columns: 1fr; }
   .contact-col {

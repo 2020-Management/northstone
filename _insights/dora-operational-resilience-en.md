@@ -1,5 +1,7 @@
 ---
 title: "DORA made resilience an evidenced obligation. That is a category."
+# Temporarily hidden, replaced by the AI piece. To reactivate: remove published: false — here and in the DE version.
+published: false
 category: Regulation
 date: 2026-03-01
 read_time: "8 min read"

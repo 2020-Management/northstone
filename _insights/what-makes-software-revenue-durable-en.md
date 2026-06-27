@@ -8,7 +8,7 @@ permalink: /en/insights/what-makes-software-revenue-durable/
 alternate_url: /insights/what-makes-software-revenue-durable/
 featured: true
 standfirst: "Recurring revenue is not the same as durable revenue. The distinction is the whole of our underwriting, and it rests on why the customer cannot easily leave."
-summary: "A subscription line tells you revenue recurred once. It does not tell you it will recur again. We underwrite the reason the customer stays — embeddedness, switching cost, and spend the business cannot defer — because that is what makes software revenue durable."
+summary: "Recurring revenue alone does not make a good software company. What matters is why customers stay for the long term — whether through business-critical processes, deep integration or a clear economic benefit. These are precisely the factors we analyse before every investment."
 ---
 
 Every software pitch leads with recurring revenue, as though the word recurring settled the question of durability. It does not. Recurring describes what happened last year: an invoice was raised, and it was paid. Durable describes what will happen next year, and the year after, when a new buyer reviews the contract with fresh eyes and asks what it is for. A subscription that renews out of habit and a subscription that renews because the business cannot function without it produce the same line in a model and behave nothing alike under pressure. The whole of our underwriting is the work of telling them apart.

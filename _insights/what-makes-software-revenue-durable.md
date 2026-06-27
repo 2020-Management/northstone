@@ -8,7 +8,7 @@ permalink: /insights/what-makes-software-revenue-durable/
 alternate_url: /en/insights/what-makes-software-revenue-durable/
 featured: true
 standfirst: "Wiederkehrender Umsatz ist nicht dasselbe wie beständiger Umsatz. Diese Unterscheidung ist der Kern unserer Analyse, und sie beruht darauf, warum die Kundschaft nicht leicht gehen kann."
-summary: "Eine Abo-Position sagt Ihnen, dass der Umsatz einmal wiederkehrte. Sie sagt nicht, dass er erneut wiederkehrt. Wir prüfen den Grund, aus dem die Kundschaft bleibt – Verankerung, Wechselkosten und Ausgaben, die das Unternehmen nicht aufschieben kann –, denn das macht Softwareumsätze beständig."
+summary: "Wiederkehrende Umsätze allein machen noch kein gutes Softwareunternehmen. Entscheidend ist, warum Kunden langfristig bleiben – sei es durch geschäftskritische Prozesse, tiefe Integration oder einen klaren wirtschaftlichen Mehrwert. Genau diese Faktoren analysieren wir vor jeder Investition."
 ---
 
 Jede Software-Präsentation führt mit wiederkehrendem Umsatz, als hätte das Wort wiederkehrend die Frage der Beständigkeit beantwortet. Hat es nicht. Wiederkehrend beschreibt, was letztes Jahr geschah: Eine Rechnung wurde gestellt und sie wurde bezahlt. Beständig beschreibt, was nächstes Jahr geschehen wird und im Jahr darauf, wenn ein neuer Einkäufer den Vertrag mit frischem Blick prüft und fragt, wofür er da ist. Ein Abonnement, das aus Gewohnheit verlängert wird, und eines, das verlängert wird, weil das Unternehmen ohne es nicht funktionieren kann, ergeben dieselbe Position im Modell und verhalten sich unter Druck völlig unterschiedlich. Der ganze Kern unserer Analyse ist die Arbeit, beide auseinanderzuhalten.
