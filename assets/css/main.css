@@ -567,7 +567,7 @@ a { color: inherit; text-decoration: none; }
 }
 .casestudy-col p { font-size: 15px; line-height: 1.62; color: var(--on-dark-soft); }
 
-/* Pipeline note + placeholder tiles */
+/* Pipeline note */
 .pipeline { margin-top: 80px; }
 .pipeline-head {
   display: flex;
