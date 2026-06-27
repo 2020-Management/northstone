@@ -12,7 +12,7 @@ description: >-
 # with no flags. On a custom domain GitHub Pages reports an empty base_path,
 # so the deploy workflow's --baseurl is empty too and the published sitemap,
 # robots.txt and canonical tags resolve at the domain root.
-url: https://northstone-invest.ch
+url: https://northstone-invest.com
 baseurl: ""
 
 author:
