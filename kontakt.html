@@ -32,7 +32,11 @@ alternate_url: /en/contact/
 
     <!-- Formular / Dank -->
     <div class="form-card">
-      <form id="inquiry-form" action="#" method="post">
+      <form id="inquiry-form" action="https://api.web3forms.com/submit" method="post">
+        <input type="hidden" name="access_key" value="c909bd36-36b8-48ac-a319-b2133116b6f6">
+        <input type="hidden" name="subject" value="Neue Anfrage – Northstone Invest (DE)">
+        <input type="hidden" name="from_name" value="Northstone Invest Website">
+        <input type="checkbox" name="botcheck" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
         <div class="field-row">
           <label class="field">
             <span class="field-label">Vollständiger Name</span>
@@ -58,6 +62,7 @@ alternate_url: /en/contact/
           <textarea name="message" rows="4" placeholder="Worüber möchten Sie sprechen?"></textarea>
         </label>
         <button type="submit" class="btn btn--accent form-submit">Anfrage absenden →</button>
+        <p class="form-error" id="inquiry-error" role="alert" hidden>Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut oder schreiben Sie uns direkt an <a href="mailto:ir@northstone-invest.com">ir@northstone-invest.com</a>.</p>
         <p class="form-fineprint">Mit dem Absenden Ihrer Anfrage bestätigen Sie, dass Ihre Kontaktaufnahme aus eigener Initiative erfolgt. Northstone Invest verwendet Ihre Angaben ausschliesslich zur Bearbeitung Ihrer Anfrage und wird Sie nur im Zusammenhang mit dieser kontaktieren. Ihre Daten werden nicht an Dritte weitergegeben.</p>
       </form>
 

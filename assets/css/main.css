@@ -803,6 +803,15 @@ a.detail-value:hover { color: var(--accent); }
   border: 1px solid var(--line);
   padding: 48px;
 }
+/* Spam honeypot: hidden from people, left in the DOM for bots to fill.
+   Positioned off-screen rather than display:none so bots don't skip it. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 .field-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -863,6 +872,16 @@ a.detail-value:hover { color: var(--accent); }
   line-height: 1.6;
   color: var(--fine-print);
 }
+.form-error {
+  margin-top: 18px;
+  padding-left: 14px;
+  border-left: 2px solid var(--accent);
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--ink-body);
+}
+.form-error[hidden] { display: none; }
+.form-error a { color: var(--accent); }
 
 /* Thank-you state */
 .form-thanks {

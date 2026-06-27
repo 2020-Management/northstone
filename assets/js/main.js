@@ -89,20 +89,43 @@
     var thanks = document.getElementById("inquiry-thanks");
     if (!form || !thanks) return;
 
+    var submit = form.querySelector(".form-submit");
+    var error = document.getElementById("inquiry-error");
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
       if (!form.reportValidity()) return;
 
-      // --- Real submission goes here. ---
-      // GitHub Pages is static, so wire this to a hosted form handler
-      // (Formspree, Web3Forms, a serverless function, …):
-      //
-      //   fetch(form.action, { method: "POST", body: new FormData(form) })
-      //     .then(showThanks).catch(showError);
-      //
-      // For now we show the success state client-side only.
-      showThanks();
+      // POST to the hosted form handler (Web3Forms), which relays the
+      // submission to Investor Relations. Without JS the native form POST
+      // still reaches the same endpoint and shows Web3Forms' own success page.
+      setBusy(true);
+      if (error) error.hidden = true;
+
+      fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form)
+      })
+        .then(function (res) {
+          if (!res.ok) throw new Error("Request failed: " + res.status);
+          return res.json();
+        })
+        .then(function (data) {
+          if (!data.success) throw new Error(data.message || "Submission rejected");
+          showThanks();
+        })
+        .catch(function () {
+          setBusy(false);
+          if (error) error.hidden = false;
+        });
     });
+
+    function setBusy(busy) {
+      if (!submit) return;
+      submit.disabled = busy;
+      submit.setAttribute("aria-busy", busy ? "true" : "false");
+    }
 
     function showThanks() {
       form.hidden = true;
