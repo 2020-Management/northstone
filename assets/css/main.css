@@ -935,7 +935,9 @@ a.detail-value:hover { color: var(--accent); }
 
 /* ====== 17. Insights index ====== */
 
-.insights-page-head { padding: 96px 0 56px; }
+/* Vertical padding only — keep the container's horizontal gutter intact
+   (the `padding` shorthand would reset it to 0 and push content edge to edge). */
+.insights-page-head { padding-top: 96px; padding-bottom: 56px; }
 .insights-h1 {
   max-width: 20ch;
   font-family: var(--serif);
@@ -1002,7 +1004,7 @@ a.detail-value:hover { color: var(--accent); }
   color: var(--accent);
 }
 
-.insights-grid { padding: 64px 0 var(--section-pad); }
+.insights-grid { padding-top: 64px; padding-bottom: var(--section-pad); }
 .insights-grid .card-grid { gap: 40px 32px; }
 .insights-grid .card-title { font-size: 22px; }
 .insights-grid .card-summary { line-height: 1.56; }
