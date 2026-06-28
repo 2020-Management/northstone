@@ -358,6 +358,9 @@ a { color: inherit; text-decoration: none; }
   gap: 72px;
   align-items: start;
 }
+/* Let columns shrink below their content's intrinsic width so a long
+   German compound word can't force the grid wider than the viewport. */
+.hero-grid > * { min-width: 0; }
 .hero-eyebrow {
   display: flex;
   align-items: center;
@@ -380,6 +383,10 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.04;
   letter-spacing: -0.015em;
   color: var(--on-dark);
+  /* Long German compounds hyphenate (lang="de") instead of overflowing. */
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 .hero-lede {
   margin-top: 30px;
@@ -1290,6 +1297,10 @@ a.detail-value:hover { color: var(--accent); }
 }
 
 @media (max-width: 560px) {
+  /* Ease the hero title down so it sits comfortably within the narrow
+     viewport rather than filling it edge to edge. */
+  .hero-title { font-size: clamp(31px, 8.5vw, 40px); }
+
   /* Meta strip: stack into one column so values stop overflowing the cell */
   .meta-strip { grid-template-columns: 1fr; }
   .meta-cell {
