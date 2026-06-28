@@ -946,6 +946,10 @@ a.detail-value:hover { color: var(--accent); }
   line-height: 1.04;
   letter-spacing: -0.015em;
   color: var(--ink);
+  /* Long German compounds hyphenate (lang="de") instead of overflowing. */
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 /* When the page head has no filter row (e.g. the news index), the mandate
    line follows the H1 directly — neutralise its negative top margin so it
